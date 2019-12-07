@@ -1,6 +1,6 @@
 <template>
   <div >
-   我是首页 33333
+   我是首页 555555555
   </div>
 </template>
 
