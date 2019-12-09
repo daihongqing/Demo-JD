@@ -1,29 +1,54 @@
 <template>
   <div class="box">
-        <div class="content">
-          <router-view></router-view>
+    <div class="content">
+      <router-view></router-view>
+    </div>
+    <nav class="navBox">
+      <div>
+        <router-link to="/index/home">
+          <div >
+           <i style="font-size:7vw;
+          display:block ; height:7vw" class="iconfont icon-jingdong"></i>
+           <span>首页</span>
           </div>
-        <nav class="navBox">
-         <div>
-           <router-link to="/index/home">
-              <div>首页</div>
-           </router-link>
-         </div>
-         <div><router-link to="/index/classify">
-              <div>分类</div>
-           </router-link></div>
-         <div><router-link to="/index/surprise">
-              <div>京喜</div>
-           </router-link></div>
-         <div><router-link to="/index/shopping">
-              <div>购物车</div>
-           </router-link></div>
-         <div><router-link to="/index/user">
-              <div>未登录</div>
-           </router-link></div>
-        </nav>
+        </router-link>
+      </div>
+      <div>
+        <router-link to="/index/classify">
+          <div>
+            <i style="font-size:7vw;
+             display:block ; height:7vw" class="iconfont icon-fenlei"></i>
+           <span>分类</span>
+          </div>
+        </router-link>
+      </div>
+      <div>
+        <router-link to="/index/surprise">
+          <div>
+            <img src="../assets/surprise.gif" alt />
+          </div>
+        </router-link>
+      </div>
+      <div>
+        <router-link to="/shopping">
+          <div>
+             <i style="font-size:7vw;
+             display:block ; height:7vw" class="iconfont icon-cart"></i>
+           <span>购物车</span>
+          </div>
+        </router-link>
+      </div>
+      <div>
+        <router-link to="/index/user">
+          <div>
+             <i style="font-size:7vw;
+             display:block ; height:7vw" class="iconfont icon-mainoff"></i>
+           <span>我的</span>
+          </div>
+        </router-link>
+      </div>
+    </nav>
   </div>
-    
 </template>
 
 <script>
@@ -31,33 +56,78 @@
 // import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'home',
-  components: {
-      
-  }
-}
+  name: "home",
+  data() {
+    return {
+      active: 0,
+      pathname: window.location.pathname
+    };
+  },
+  created() {
+    console.log(this.pathname)
+  },
+  /* computed: {
+    move:function() {
+      switch (this.pathname) {
+        case '/index/home':
+          console.log(qqq)
+         return this.active = 0;
+          break;
+
+        case '/index/classify':
+         return this.active = 1;
+          break;
+        default:
+          console.log(111)
+          break;
+          
+      }
+    }
+  }, */
+  methods: {},
+  components: {},
+  watch: {
+    'this.pathname':function(newVal,oldVal){
+      console.log(newVal,oldVal)
+      if(newVal==='/index/home'){
+        console.log(111)
+      }else if(newVal==='/index/classify'){
+        console.log(222)
+      }
+    }
+  },
+};
 </script>
 <style lang="less" scoped>
-  .box{
-    padding-bottom: 15vw
-  }
-  nav{
-    width: 100%;
-    height: 15vw;
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background: #fff;
-    box-shadow: -1px 4px 6px 15px #eee;
-    div{
-      flex: 1;
-      text-align: center;
-      line-height: 18vw;
-      border-right: 1px #ccc solid;
-      &:nth-child(5){
-        border-right: 0
-      };
+.box {
+  padding-bottom: 15vw;
+}
+nav {
+  width: 100%;
+  height: 15vw;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: -1px 4px 6px 15px #eee;
+  div {
+    flex: 1;
+    text-align: center;
+    // line-height: 15vw;
+    border-right: 1px #ccc solid;
+    
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &:nth-child(5) {
+      border-right: 0;
     }
   }
+  .router-link-active{
+    color: red
+  }
+}
 </style>
