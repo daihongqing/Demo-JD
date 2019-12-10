@@ -9,9 +9,9 @@ import home from './home'
 
 
 Vue.use(VueRouter)
-import { Grid, GridItem, Icon } from 'vant';
+import { Grid, GridItem, Icon, Divider } from 'vant';
 
-Vue.use(Icon).use(Grid).use(GridItem);
+Vue.use(Divider).use(Icon).use(Grid).use(GridItem);
 
 const routes = [
   {

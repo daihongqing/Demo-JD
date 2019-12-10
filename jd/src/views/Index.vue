@@ -111,7 +111,8 @@ nav {
   bottom: 0;
   left: 0;
   background: #fff;
-  box-shadow: -1px 4px 6px 15px #eee;
+  box-shadow: 0 0 10px 0 hsla(0,6%,58%,.6);
+  -webkit-box-shadow: 0 0 10px 0 hsla(0,6%,58%,.6);
   div {
     flex: 1;
     text-align: center;

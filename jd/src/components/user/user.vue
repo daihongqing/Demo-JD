@@ -53,10 +53,23 @@
     </div>
     <!-- 订单 -->
     <van-grid :border="false" class="aa">
-      <van-grid-item icon="card" text="待付款" />
-      <van-grid-item icon="logistics" text="待收货" />
-      <van-grid-item icon="gold-coin" text="退换/售后" />
-      <van-grid-item icon="label" style="color:#ff0000" text="全部订单" />
+      <van-grid-item
+        icon="https://img11.360buyimg.com/jdphoto/s40x40_jfs/t14911/113/1615678148/168/7734f24f/5a53578eN0e2811b6.png"
+        text="待付款"
+      />
+      <van-grid-item
+        icon="https://img11.360buyimg.com/jdphoto/s40x40_jfs/t14608/2/1636876268/266/b4ebb3f2/5a535791N627c296c.png"
+        text="待收货"
+      />
+      <van-grid-item
+        icon="https://img11.360buyimg.com/jdphoto/s40x40_jfs/t15049/345/1573771240/492/7ef15694/5a5357eaNab882dcb.png"
+        text="退换/售后"
+      />
+      <van-grid-item
+        icon="https://img30.360buyimg.com/jdphoto/jfs/t14953/346/2113764063/185/1a1dcd24/5a6d7b8bN8431ea1a.png"
+        style="color:#ff0000"
+        text="全部订单"
+      />
     </van-grid>
     <!-- 资产 -->
     <van-grid :border="false" class="bb" :column-num="5">
@@ -90,8 +103,12 @@
       </van-grid-item>
       <van-grid-item>
         <div data-v-1e5feae4>
-          <van-icon name="pending-payment" size="20px" style="position: relative;
-    top: 3px;" />
+          <van-icon
+            name="https://img11.360buyimg.com/jdphoto/s40x40_jfs/t20329/11/1228908740/243/73a7934c/5b235f37Ne85fdb85.png"
+            size="20px"
+            style="position: relative;
+    top: 3px;"
+          />
         </div>
         <span class="assets_item_key">我的资产</span>
       </van-grid-item>
@@ -99,19 +116,315 @@
     <!-- 收藏 -->
     <van-grid class="cc" :border="false" :column-num="3">
       <van-grid-item>
-        <span>0</span>
-        <span>我的收藏</span>
+        <span class="store_val">0</span>
+        <span class="assets_item_key">我的收藏</span>
       </van-grid-item>
       <van-grid-item>
-        <span>0</span>
-        <span>店铺收藏</span>
+        <span class="store_val">0</span>
+        <span class="assets_item_key">店铺收藏</span>
       </van-grid-item>
       <van-grid-item>
-        <span>0</span>
-        <span>我的足迹</span>
+        <span class="store_val">0</span>
+        <span class="assets_item_key">我的足迹</span>
       </van-grid-item>
     </van-grid>
-    
+    <!-- 小应用 -->
+    <van-grid :border="false" class="aa">
+      <van-grid-item
+        icon="https://img14.360buyimg.com/jdphoto/jfs/t1/24988/22/12030/2316/5c94d6d4E7cdcf995/c8fe8e84d89685f7.png!q70.webp"
+        text="我的预约"
+      />
+      <van-grid-item
+        icon="https://img10.360buyimg.com/jdphoto/jfs/t12931/150/1327543095/1276/e9e67341/5a1e9ee2Nb5baf153.png!q70.webp"
+        text="京东车票"
+      />
+      <van-grid-item
+        icon="https://img13.360buyimg.com/jdphoto/jfs/t13612/121/1346421356/1355/9014e74f/5a1e9f1cNab886864.png!q70.webp"
+        text="应用推荐"
+      />
+      <van-grid-item
+        icon="https://img30.360buyimg.com/jdphoto/jfs/t12514/60/1318835455/1723/d6ae70f5/5a1e9e39Ndc5e9285.png!q70.webp"
+        text="用户福利"
+      />
+      <van-grid-item
+        icon="https://img14.360buyimg.com/jdphoto/jfs/t18940/299/476632277/2164/4453d9e4/5a813897N7c80dea2.png!q70.webp"
+        text="京东机票"
+      />
+      <van-grid-item
+        icon="https://img20.360buyimg.com/jdphoto/jfs/t16390/157/2010422417/341/bb4c68c4/5a8138f2Nfd5de7b7.png!q70.webp"
+        text="京东酒店"
+      />
+      <van-grid-item icon text />
+      <van-grid-item icon text />
+    </van-grid>
+    <!-- 服务 -->
+    <div class="service">客服服务</div>
+
+    <!-- 分割线 -->
+    <van-divider
+      class="recomm_mod_title_text"
+      :style="{ color: '#999', borderColor: '#ccc', padding: '0 16px'}"
+    >
+      <span>为您推荐</span>
+    </van-divider>
+    <!-- 推荐 -->
+    <van-grid class="qqq" :gutter="1" :column-num="2">
+      <van-grid-item>
+        <van-image
+          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
+        />
+        <div class="info">
+          <div class="rec_name">
+            <i class="mod_tag">
+              <img
+                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
+              />
+            </i>
+            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
+          </div>
+          <div class="price_info">
+            <div class="price">
+              ￥
+              <em>1000</em>
+            </div>
+          </div>
+        </div>
+      </van-grid-item>
+      <van-grid-item>
+        <van-image
+          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
+        />
+        <div class="info">
+          <div class="rec_name">
+            <i class="mod_tag">
+              <img
+                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
+              />
+            </i>
+            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
+          </div>
+          <div class="price_info">
+            <div class="price">
+              ￥
+              <em>1000</em>
+            </div>
+          </div>
+        </div>
+      </van-grid-item>
+      <van-grid-item>
+        <van-image
+          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
+        />
+        <div class="info">
+          <div class="rec_name">
+            <i class="mod_tag">
+              <img
+                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
+              />
+            </i>
+            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
+          </div>
+          <div class="price_info">
+            <div class="price">
+              ￥
+              <em>1000</em>
+            </div>
+          </div>
+        </div>
+      </van-grid-item>
+      <van-grid-item>
+        <van-image
+          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
+        />
+        <div class="info">
+          <div class="rec_name">
+            <i class="mod_tag">
+              <img
+                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
+              />
+            </i>
+            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
+          </div>
+          <div class="price_info">
+            <div class="price">
+              ￥
+              <em>1000</em>
+            </div>
+          </div>
+        </div>
+      </van-grid-item>
+      <van-grid-item>
+        <van-image
+          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
+        />
+        <div class="info">
+          <div class="rec_name">
+            <i class="mod_tag">
+              <img
+                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
+              />
+            </i>
+            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
+          </div>
+          <div class="price_info">
+            <div class="price">
+              ￥
+              <em>1000</em>
+            </div>
+          </div>
+        </div>
+      </van-grid-item>
+      <van-grid-item>
+        <van-image
+          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
+        />
+        <div class="info">
+          <div class="rec_name">
+            <i class="mod_tag">
+              <img
+                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
+              />
+            </i>
+            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
+          </div>
+          <div class="price_info">
+            <div class="price">
+              ￥
+              <em>1000</em>
+            </div>
+          </div>
+        </div>
+      </van-grid-item>
+      <van-grid-item>
+        <van-image
+          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
+        />
+        <div class="info">
+          <div class="rec_name">
+            <i class="mod_tag">
+              <img
+                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
+              />
+            </i>
+            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
+          </div>
+          <div class="price_info">
+            <div class="price">
+              ￥
+              <em>1000</em>
+            </div>
+          </div>
+        </div>
+      </van-grid-item>
+      <van-grid-item>
+        <van-image
+          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
+        />
+        <div class="info">
+          <div class="rec_name">
+            <i class="mod_tag">
+              <img
+                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
+              />
+            </i>
+            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
+          </div>
+          <div class="price_info">
+            <div class="price">
+              ￥
+              <em>1000</em>
+            </div>
+          </div>
+        </div>
+      </van-grid-item>
+      <van-grid-item>
+        <van-image
+          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
+        />
+        <div class="info">
+          <div class="rec_name">
+            <i class="mod_tag">
+              <img
+                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
+              />
+            </i>
+            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
+          </div>
+          <div class="price_info">
+            <div class="price">
+              ￥
+              <em>1000</em>
+            </div>
+          </div>
+        </div>
+      </van-grid-item>
+      <van-grid-item>
+        <van-image
+          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
+        />
+        <div class="info">
+          <div class="rec_name">
+            <i class="mod_tag">
+              <img
+                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
+              />
+            </i>
+            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
+          </div>
+          <div class="price_info">
+            <div class="price">
+              ￥
+              <em>1000</em>
+            </div>
+          </div>
+        </div>
+      </van-grid-item>
+    </van-grid>
+
+    <!-- 底部 -->
+    <div class="m-common-footer">
+      <ul class="common-links">
+        <li>
+          <a href>jd_4572477b343e7</a>
+        </li>
+        <li>
+          <a href>退出</a>
+        </li>
+        <li>
+          <a href>客户服务</a>
+        </li>
+        <li>
+          <a href style="border-right: 1px solid transparent">返回顶部</a>
+        </li>
+      </ul>
+      <ul class="common-icons">
+        <li>
+          <a href>
+            <img
+              src="//m.360buyimg.com/mobilecms/jfs/t16423/186/2517573622/5186/75a541f7/5ab1c0deN947bdcba.png"
+              alt
+            />
+          </a>
+        </li>
+        <li>
+          <a href>
+            <img
+              src="//m.360buyimg.com/mobilecms/jfs/t18550/294/898388074/6574/3a8c5413/5ab0b8e9Ne9c48331.png"
+              alt
+            />
+          </a>
+        </li>
+        <li>
+          <a href>
+            <img
+              src="//m.360buyimg.com/mobilecms/jfs/t14581/218/2689195961/4696/203b872a/5ab1c0f2N51c3f1bb.png"
+              alt
+            />
+          </a>
+        </li>
+      </ul>
+      <div class="common-copyright">Copyright © 2004-2019 京东JD.com 版权所有</div>
+    </div>
   </div>
 </template>
 <script>
@@ -425,6 +738,183 @@ export default {
   .cc {
     line-height: 8vw;
     margin: 15px 0;
+    .store_val {
+      font-size: 16px;
+      font-weight: 700;
+      color: #333;
+      position: relative;
+    }
+    .assets_item_key {
+      font-size: 12px;
+      color: #666;
+      line-height: 20px;
+      display: block;
+    }
+  }
+  .service {
+    position: relative;
+    margin: 15px 0;
+    background: #fff;
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    padding: 0 10px;
+    text-align: initial;
+  }
+  .recomm_mod_title_text {
+    position: relative;
+    margin: 15px 0;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    span {
+      z-index: 2;
+      position: relative;
+      background-color: #f7f7f7;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 49%;
+        margin-top: -2px;
+        width: 4px;
+        height: 4px;
+        background-color: #ccc;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &::before {
+        left: -15px;
+      }
+      &::after {
+        right: -15px;
+      }
+    }
+  }
+  .qqq {
+    .van-grid-item {
+      .van-grid-item__content {
+        padding: 15px 15px 0;
+        .info {
+          .rec_name {
+            margin: 12px 0 4px;
+            font-size: 12px;
+            color: #333;
+            line-height: 18px;
+            height: 36px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-align: initial;
+            .mod_tag {
+              display: inline-block;
+              vertical-align: middle;
+              height: 14px;
+              img {
+                display: block;
+                height: 100%;
+              }
+            }
+          }
+          .price_info {
+            width: 100%;
+            text-align: initial;
+            overflow: hidden;
+            .price {
+              display: inline-block;
+              font-size: 12px;
+              color: #e93b3d;
+              margin-right: 3px;
+              line-height: 20px;
+              em {
+                font-size: 16px;
+                font-style: normal;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .m-common-footer {
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #fff;
+    .common-links {
+      box-sizing: border-box;
+      border-bottom: 1px solid #e5e5e5;
+      border-top: 1px solid #e5e5e5;
+      padding: 4.26667vw 5.33333vw;
+      li {
+        float: left;
+        text-align: center;
+        width: 25%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 0 5px;
+        box-sizing: border-box;
+        a {
+          position: relative;
+          display: block;
+          box-sizing: border-box;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          color: #848689;
+          font-size: 3.73333vw;
+          padding-top: 3px;
+          &::after {
+            content: "";
+            display: inline-block;
+            height: 70%;
+            width: 1px;
+            background-color: #d7d7d7;
+            position: absolute;
+            right: 0;
+            top: 15%;
+          }
+        }
+      }
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+    .common-icons {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 1.06667vw 2vw;
+      li {
+        float: left;
+        text-align: center;
+        width: 33.3333%;
+        a {
+          display: block;
+          width: 100%;
+          position: relative;
+          img {
+            width: 16vw;
+            vertical-align: middle;
+          }
+        }
+      }
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+    .common-copyright {
+      text-align: center;
+      color: #848689;
+      font-size: 1.86667vw;
+      padding: 2vw 0;
+    }
   }
 }
 </style>
