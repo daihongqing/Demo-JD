@@ -1,0 +1,51 @@
+----
+用户登录
+URL：/user/login
+METHOD：POST
+PARAMS：phone=xxx&password=xxx
+RESULT：{
+	code:0  //=>0成功 1失败
+	codeText:'OK',  //=>CODE状态码描述
+}
+
+----
+检测是否登录
+URL：/user/login
+METHOD：GET
+PARAMS：null
+RESULT：{
+	code:0  
+	codeText:'OK'
+}
+
+----
+退出登录
+URL：/user/signout
+METHOD：GET
+PARAMS：null
+RESULT：{
+	code:0  
+	codeText:'OK'
+}
+----
+用户注册
+URL：/user/add
+METHOD：GET
+PARAMS：phone:xxx&password:xxx
+RESULT：{
+	code:0  
+	codeText:'OK'
+}
+----
+HOMEDATA
+URL：/home/slide
+METHOD：GET
+PARAMS：null
+RESULT：{
+	code:0  
+	codeText:'OK'
+    data[{
+		seiper:[{id:xx,pic:xx}],
+		card1:[{id:xxx,pic:xxx,title:xxx}],
+		card2[{id:xxx,pic:xxx,title:xxx}]
+       }]
