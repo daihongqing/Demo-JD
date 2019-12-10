@@ -44,8 +44,19 @@ PARAMS：null
 RESULT：{
 	code:0  
 	codeText:'OK'
-    data[{
-		seiper:[{id:xx,pic:xx}],
-		card1:[{id:xxx,pic:xxx,title:xxx}],
-		card2[{id:xxx,pic:xxx,title:xxx}]
-       }]
+    data:[{wiper:[{id:xx,pic:xx}]},
+		{card1:[{id:xxx,pic:xxx,title:xxx}]},
+		{card2[{id:xxx,pic:xxx,title:xxx}]}
+       ]
+----
+CLASSIFYATA
+URL：/classify/list
+METHOD：GET
+PARAMS：null
+RESULT：{
+	code:0  
+	codeText:'OK'
+    data:[
+		{title:[{itl:xxx}]},
+		{hot:[{id:xxx,title:xxx,"children": [{"pic_url": "https://b4.png","describe": "小米"}]},
+       ]

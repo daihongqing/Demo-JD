@@ -23,8 +23,8 @@
     }, {
         "id": 8,
         "pic": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/94398/38/4882/127787/5de9b746Eafae778f/57d77f679a79650e.jpg!cr_1125x445_0_171!q70.jpg.dpg"
-    }],
-    "card1": [{
+    }]},
+    {"card1": [{
         "id": 1,
         "pic": "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png.webp",
         "title": "京东超市"
@@ -64,8 +64,8 @@
         "id": 10,
         "pic": "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/22262/9/1470/4527/5c120cd0E5d3c6c66/4792ec307a853e9f.png.webp",
         "title": "PLUS会员"
-    }],
-    "card2": [{
+    }]},
+    {"card2": [{
         "id": 1,
         "pic": "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/89640/36/2804/8167/5dd6aca9E4b04fedd/fbc6adc345138b30.png.webp",
         "title": "京东国际"
@@ -105,8 +105,8 @@
         "id": 10,
         "pic": "https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/28873/5/1455/6885/5c120bb9Eb6610bee/29d349f92aeb6eaf.png.webp",
         "title": "全部"
-    }],
-    "runM": [{
+    }]},
+   {"runM": [{
         "id": 1,
         "original":888,
         "present":250,
@@ -156,5 +156,5 @@
         "original":888,
         "present":250,
         "pic":"https://img14.360buyimg.com/n1/s150x150_jfs/t1/48628/7/13020/262564/5d9f05cfEc0f008bf/724623b606ab8b72.jpg.dpg"
-    }]
-}]
+    }]}
+]
