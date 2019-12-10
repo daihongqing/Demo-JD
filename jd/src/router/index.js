@@ -6,12 +6,10 @@ import shopping from './shopping'
 import surprise from './surprise'
 import user from './user'
 import home from './home'
+import acco from './acco'
 
 
 Vue.use(VueRouter)
-import { Grid, GridItem, Icon, Divider } from 'vant';
-
-Vue.use(Divider).use(Icon).use(Grid).use(GridItem);
 
 const routes = [
   {
@@ -19,7 +17,7 @@ const routes = [
     name: 'Index',
     redirect: '/index/home',
     component: Index,
-    children: home.concat(classify, shopping, surprise, user)
+    children: home.concat(classify, shopping, surprise, user,acco)
   },
   {
     path: '/login',
