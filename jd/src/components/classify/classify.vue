@@ -69,9 +69,9 @@ export default {
     change(index) {
       //  console.log(index);
       this.$nextTick(() => {
-        let item = document.getElementById("navItem");
-        let ul = document.getElementById("leftNav");
-        let box = document.getElementsByClassName("left")[0];
+        let item = document.getElementById("navItem");//每一个导航
+        let ul = document.getElementById("leftNav");//最高的div
+        let box = document.getElementsByClassName("left")[0];//短的div
         let height = item.offsetHeight;
         let allHeight = box.offsetHeight;
         let ulHeight=ul.offsetHeight

@@ -38,10 +38,14 @@
         </div>
       </div>
     </header>
-
-    <main>
+    <main v-if="hide">
       <i>登录后可同步账户购物车中的商品</i>
+      <van-button type="danger"  style="width:19vw;height:10vw">登录</van-button>
     </main>
+    <section v-if="hide">
+        <img src="//img11.360buyimg.com/jdphoto/s180x180_jfs/t18163/292/540553659/74408/adeb7463/5a93c51cN3bb5e37b.png" alt="">
+        <p>登录后可同步购物车中商品</p>
+    </section>
   </div>
 </template>
 <script>
@@ -51,7 +55,8 @@ export default {
   name: "XXX",
   data() {
     return {
-      flag: false
+      flag: false,
+      hide:'true'
     };
   },
   methods: {
@@ -66,6 +71,15 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+section{
+    width: 100%;
+    height: 30vw;
+    padding: 20vw;
+    img{
+        width: 10vw;
+        height: 10vw;
+    }
+}
 header{
 //   position: fixed;
   width: 100%;
@@ -73,6 +87,12 @@ header{
 }
 main {
   width: 100%;
+  height: 13vw;
+  line-height: 13vw;
+  i{
+      font-size:3.5vw;
+     margin-right: 3vw;
+  }
 }
 
 .back {
