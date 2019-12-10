@@ -2,7 +2,7 @@
   <div>
     <header>
       <span class="back" @click="back"></span>
-      <van-search class="inp" placeholder="请输入搜索关键词" v-model="value" style="width:88vw" />
+      <van-search class="inp" placeholder="搜索商品/店铺" v-model="value" style="width:88vw" />
       <van-icon @click="hide" name="weapp-nav" class="menu" size="5vw" />
       <div class="rightMenu" v-show="flag">
         <div class="sanjiao"></div>
@@ -39,14 +39,20 @@
       </div>
     </header>
     <div class="text">
-      <van-sidebar class="leftNav" v-model="activeKey" sticky>
-        <van-sidebar-item v-for=" item in 15" :title="'标签 ' + item" :key="item"></van-sidebar-item>
-      </van-sidebar>
-      <my-test></my-test>
+      <div class="left">
+        <van-sidebar id="leftNav" v-model="activeKey">
+          <van-sidebar-item
+            v-for=" item in nav"
+            :title="item"
+            :key="item"
+            @click="change"
+            id="navItem"
+          ></van-sidebar-item>
+        </van-sidebar>
+      </div>
 
-      
+      <!-- <my-test></my-test> -->
     </div>
-    
   </div>
 </template>
 <script>
@@ -59,7 +65,32 @@ export default {
       activeKey: 0,
       value: "",
       flag: false,
-      nav: ["热门推荐", "手机数码", "家用电器"],
+      nav: [
+        "热门推荐",
+        "手机数码",
+        "家用电器",
+        "电脑办公",
+        "计生情趣",
+        "美妆护肤",
+        "个护清洁",
+        "汽车生活",
+        "京东超市",
+        "男装",
+        "男鞋",
+        "女装",
+        "女鞋",
+        "母音童装",
+        "图像音屏",
+        "运动户外",
+        "内衣配饰",
+        "食品生鲜",
+        "酒水饮料",
+        "家具家装",
+        "家具厨具",
+        "箱包手袋",
+        "钟表珠宝",
+        "玩具乐器"
+      ],
 
       index: 0
     };
@@ -70,12 +101,50 @@ export default {
     //   return this.index=this.activeKey
     // }
   },
+  mounted() {},
   methods: {
     back() {
       this.$router.push("/index/home");
     },
     hide() {
       this.flag = !this.flag;
+    },
+    change(index) {
+      //  console.log(index);
+      this.$nextTick(() => {
+        let item=document.getElementById('navItem')
+        let nav=document.getElementById('leftNav')
+        let left=document.getElementsByClassName('left')[0]
+        let  height=item.offsetHeight;
+        let allHeight=left.offsetHeight;
+        let navHeight=nav.offsetHeight
+        let t= allHeight-navHeight;
+        let n=1
+        // console.log(nav,-height*index)
+        nav.style.transform=`translateY(${(height*index>=allHeight/2 ?-height*n++ :0 )}px)`
+        console.log(height*index,allHeight/2,n )
+        // debugger
+        //  left.scrollTop=height*index-1
+
+        // let box = document.getElementById("left");
+        // let ul = box.querySelector(".leftNav");
+        // debugger
+        // let x =( y = 0);
+        // box.ontouchstart = function(e) {
+        //   this.sx = e.touches[0].pageX;
+        //   this.sy = e.touches[0].pageY;
+        // };
+        // box.ontouchmove = function(e) {
+        //   let { pageX, pageY } = e.changedTouches[0];
+        //   console.log(pageX - box.sx);
+        //   ul.style.transform = `translateY(${x + pageX - box.sx}px)`;
+        // };
+        // box.ontouchend = function(e) {
+        //   let { pageX, pageY } = e.changedTouches[0];
+        //   x = x + pageX - box.sx;
+        //   y = y + pageY - box.sy;
+        // };
+      });
     }
   },
   components: {
@@ -84,19 +153,30 @@ export default {
 };
 </script>
 <style lang="less">
-header{
-  position: fixed
+header {
+  position: fixed;
 }
-.test{
+
+.test {
   width: 100%;
   // display: flex
 }
-.leftNav {
+.left {
   float: left;
+  width: 21vw;
+
   position: fixed;
-  left:0;
+  left: 0;
   top: 11vw;
+  height: 86vh;
+  // overflow: scroll;
+  overflow: hidden;
+}
+#leftNav {
   // flex: 1
+  // overflow: scroll;
+  transition: all 0.3s;
+  height: 1140px;
 }
 .menu {
   float: right;

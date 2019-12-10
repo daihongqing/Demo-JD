@@ -27,8 +27,8 @@ export default {
 <style lang="less" scoped>
 .box {
   width: 79vw;
-  float: left;
-  margin-left: 20vw;
+  float: right;
+//   margin-left: 20vw;
   margin-top: 13vw;
   margin-bottom: 15vw;
 // position: absolute;
