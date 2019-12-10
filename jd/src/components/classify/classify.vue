@@ -51,13 +51,14 @@
         </van-sidebar>
       </div>
 
-      <!-- <my-test></my-test> -->
+      <my-test></my-test>
     </div>
   </div>
 </template>
 <script>
 // @ is an alias to /src
 import test from "./test";
+
 export default {
   name: "XXX",
   data() {
@@ -96,11 +97,7 @@ export default {
     };
   },
   created() {},
-  computed: {
-    // change:function (){
-    //   return this.index=this.activeKey
-    // }
-  },
+  computed: {},
   mounted() {},
   methods: {
     back() {
@@ -112,38 +109,18 @@ export default {
     change(index) {
       //  console.log(index);
       this.$nextTick(() => {
-        let item=document.getElementById('navItem')
-        let nav=document.getElementById('leftNav')
-        let left=document.getElementsByClassName('left')[0]
-        let  height=item.offsetHeight;
-        let allHeight=left.offsetHeight;
-        let navHeight=nav.offsetHeight
-        let t= allHeight-navHeight;
-        let n=1
-        // console.log(nav,-height*index)
-        nav.style.transform=`translateY(${(height*index>=allHeight/2 ?-height*n++ :0 )}px)`
-        console.log(height*index,allHeight/2,n )
-        // debugger
-        //  left.scrollTop=height*index-1
-
-        // let box = document.getElementById("left");
-        // let ul = box.querySelector(".leftNav");
-        // debugger
-        // let x =( y = 0);
-        // box.ontouchstart = function(e) {
-        //   this.sx = e.touches[0].pageX;
-        //   this.sy = e.touches[0].pageY;
-        // };
-        // box.ontouchmove = function(e) {
-        //   let { pageX, pageY } = e.changedTouches[0];
-        //   console.log(pageX - box.sx);
-        //   ul.style.transform = `translateY(${x + pageX - box.sx}px)`;
-        // };
-        // box.ontouchend = function(e) {
-        //   let { pageX, pageY } = e.changedTouches[0];
-        //   x = x + pageX - box.sx;
-        //   y = y + pageY - box.sy;
-        // };
+        let item = document.getElementById("navItem");
+        let ul = document.getElementById("leftNav");
+        let box = document.getElementsByClassName("left")[0];
+        let height = item.offsetHeight;
+        let allHeight = box.offsetHeight;
+        let ulHeight=ul.offsetHeight
+        // let t= allHeight-ulHeight;
+        let n = 1;
+        // console.log(ul,-height*index)
+        ul.style.transform = `translateY(${-height * index +allHeight/2>=0?0:-height * index +allHeight/2<=-ulHeight+allHeight?-ulHeight+allHeight:-height * index +allHeight/2}px)`;
+        console.log(-height * index +allHeight/2,-ulHeight)
+        // return change(index)
       });
     }
   },
