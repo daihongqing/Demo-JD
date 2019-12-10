@@ -95,7 +95,6 @@
         </div>
         <span class="assets_item_key">我的资产</span>
       </van-grid-item>
-      <!-- <van-grid-item icon="pending-payment" class="ba" default style="color:#ff0000" text="我的资产" /> -->
     </van-grid>
     <!-- 收藏 -->
     <van-grid class="cc" :border="false" :column-num="3">
@@ -112,6 +111,7 @@
         <span>我的足迹</span>
       </van-grid-item>
     </van-grid>
+    
   </div>
 </template>
 <script>
