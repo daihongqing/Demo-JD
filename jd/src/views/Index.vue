@@ -6,45 +6,35 @@
     <nav class="navBox">
       <div>
         <router-link to="/index/home">
-          <div >
-           <i style="font-size:7vw;
-          display:block ; height:7vw" class="iconfont icon-jingdong"></i>
-           <span>首页</span>
-          </div>
+          <van-icon name="thumb-circle-o"></van-icon>
+          <div>首页</div>
         </router-link>
       </div>
       <div>
         <router-link to="/index/classify">
-          <div>
-            <i style="font-size:7vw;
-             display:block ; height:7vw" class="iconfont icon-fenlei"></i>
-           <span>分类</span>
-          </div>
+          <van-icon name="apps-o"></van-icon>
+          <div>分类</div>
         </router-link>
       </div>
       <div>
         <router-link to="/index/surprise">
-          <div>
-            <img src="../assets/surprise.gif" alt />
-          </div>
+          <img
+            src="https://img11.360buyimg.com/jdphoto/jfs/t1/72396/11/16575/24863/5de0f4f5Eeb23ef59/46df2d40dbb361b2.gif"
+            style="width:13vw"
+            alt
+          />
         </router-link>
       </div>
       <div>
-        <router-link to="/shopping">
-          <div>
-             <i style="font-size:7vw;
-             display:block ; height:7vw" class="iconfont icon-cart"></i>
-           <span>购物车</span>
-          </div>
+        <router-link to="/index/shopping">
+          <van-icon name="shopping-cart-o"></van-icon>
+          <div>购物车</div>
         </router-link>
       </div>
       <div>
         <router-link to="/index/user">
-          <div>
-             <i style="font-size:7vw;
-             display:block ; height:7vw" class="iconfont icon-mainoff"></i>
-           <span>我的</span>
-          </div>
+          <van-icon name="user-o"></van-icon>
+          <div>未登录</div>
         </router-link>
       </div>
     </nav>
@@ -95,39 +85,45 @@ export default {
         console.log(222)
       }
     }
-  },
+  }
 };
 </script>
 <style lang="less" scoped>
 .box {
   padding-bottom: 15vw;
+  height: 100%;
 }
 nav {
   width: 100%;
-  height: 15vw;
   display: flex;
-  position: fixed;
   align-items: center;
+  position: fixed;
   bottom: 0;
   left: 0;
   background: #fff;
-  box-shadow: -1px 4px 6px 15px #eee;
-  div {
+  > div {
     flex: 1;
     text-align: center;
-    // line-height: 15vw;
-    border-right: 1px #ccc solid;
-    
-    img {
+    // border-top: 1px #ccc solid;
+    padding: 9px;
+    > a {
+      color: gray;
       width: 100%;
-      height: 100%;
+      display: block;
+      i {
+        font-size: 22px;
+      }
+      > div {
+        font-size: 14px;
+      }
     }
     &:nth-child(5) {
       border-right: 0;
     }
+    a.router-link-active {
+      color: red;
+    }
   }
-  .router-link-active{
-    color: red
-  }
+
 }
 </style>
