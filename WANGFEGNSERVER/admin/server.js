@@ -41,12 +41,14 @@ app.use(async (req, res, next) => {
     //把读取的数据放到请求信息上
     req.$userDATA = JSON.parse(await readFile('./json/user.json'));
     req.$picDATA = JSON.parse(await readFile('./json/home.json'));
+    req.$classifyDATA = JSON.parse(await readFile('./json/classify.json'));
     next();
 });
 
 /*-ROUTE-*/
 app.use('/user', require('./routers/user'));
 app.use('/home', require('./routers/home'));
+app.use('/classify',require('./routers/classify'))
 app.use((req, res) => {
     res.status(404);
     res.send('NOT FOUND!');
