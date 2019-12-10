@@ -9,14 +9,17 @@ import home from './home'
 
 
 Vue.use(VueRouter)
+import { Grid, GridItem, Icon } from 'vant';
+
+Vue.use(Icon).use(Grid).use(GridItem);
 
 const routes = [
   {
     path: '/',
     name: 'Index',
-    redirect:'/index/home',
-    component:Index ,
-    children: home.concat(classify,shopping,surprise,user)
+    redirect: '/index/home',
+    component: Index,
+    children: home.concat(classify, shopping, surprise, user)
   },
   {
     path: '/login',
