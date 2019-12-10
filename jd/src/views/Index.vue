@@ -101,7 +101,9 @@ nav {
   bottom: 0;
   left: 0;
   background: #fff;
-  > div {
+  box-shadow: 0 0 10px 0 hsla(0,6%,58%,.6);
+  -webkit-box-shadow: 0 0 10px 0 hsla(0,6%,58%,.6);
+  div {
     flex: 1;
     text-align: center;
     // border-top: 1px #ccc solid;
