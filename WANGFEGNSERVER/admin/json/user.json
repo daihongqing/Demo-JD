@@ -2,10 +2,14 @@
     "userid": "1",
     "phone": "13717808050",
     "password": "123456789",
+    "name": "王峰",
+    "pic": "http://img2.imgtn.bdimg.com/it/u=1222599407,3835323703&fm=26&gp=0.jpg",
     "state": 0
 }, {
     "userid": "2",
     "phone": "18831413201",
     "password": "123456789",
+    "name": "纪莹",
+    "pic": "http://b-ssl.duitang.com/uploads/item/201509/30/20150930175854_w3CsQ.thumb.224_0.jpeg",
     "state": 0
 }]

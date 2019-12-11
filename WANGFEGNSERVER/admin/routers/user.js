@@ -24,10 +24,27 @@ route.post('/login', (req, res) => {
         return;
     }
     console.log(temp);
-    
+
     res.send(success(false, {
         codeText: 'user name password mismatch!'
     }));
+});
+//获取用户详细信息
+route.post('/login', (req, res) => {
+    let userID = req.session.userID;
+    let data = req.$userDATA;
+    data = data.filter(item => item.userid == userID)
+    if (data.length > 0) {
+        res.send(success(true, {
+            data: data
+        }))
+        return
+    }
+    res.send(success(false, {
+        codeText: 'user name  mismatch!'
+    }))
+
+
 });
 //验证用户是否登录
 route.get('/login', (req, res) => {
@@ -51,13 +68,10 @@ route.get('/signout', (req, res) => {
 route.post('/add', (req, res) => {
     let $userDATA = req.$userDATA,
         passDATA = null;
-    console.log($userDATA, req.body);
-
     passDATA = Object.assign({
         userid: $userDATA.length === 0 ? 1 : (parseFloat($userDATA[$userDATA.length - 1]['id'] + 1)),
         phone: '',
         password: "",
-        state: 0
     }, (req.body || {}))
     $userDATA.push(passDATA)
     writeFile('./json/user.json', $userDATA).then(() => {
