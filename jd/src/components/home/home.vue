@@ -117,11 +117,11 @@
       </div>
       <!-- 四个框 -->
       <ul class="gird">
-        <li>
-          <img
+        <li class="bg">
+           <img
             src="https://m.360buyimg.com/mobilecms/s184x242_jfs/t1/64334/23/16552/15836/5de0b7fcE54784a89/2774d71def05b8ed.png!q70.jpg.dpg"
-            alt
-          />
+            alt  /> 
+            
         </li>
         <li>
           <img
@@ -175,7 +175,6 @@
     <!-- 京东快报 -->
     <div class="quire">
       <div class="lt">京东快报</div>
-
       <van-swipe style="height: 5vw;" :autoplay="2000" :show-indicators="false" vertical>
         <van-swipe-item>
           <div>
@@ -192,7 +191,6 @@
           <span>联想小新Pro，舒适的视觉体验坚持是都会发生两顿饭了</span>
         </van-swipe-item>
       </van-swipe>
-
       <div class="rt">更多</div>
     </div>
   </div>
@@ -257,7 +255,6 @@ export default {
     background: orange;
     height: 40vw;
     border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
   }
   .slide {
     padding: 10px 10px 0 10px;
@@ -281,7 +278,6 @@ export default {
       flex: 1;
       img {
         width: 100%;
-        height: 100%;
         height: 100%;
       }
     }
