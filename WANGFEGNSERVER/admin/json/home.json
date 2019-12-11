@@ -206,6 +206,103 @@
                 "pic": "https://img14.360buyimg.com/n1/s150x150_jfs/t1/48628/7/13020/262564/5d9f05cfEc0f008bf/724623b606ab8b72.jpg.dpg"
             }
         ]
+    },
+    {
+        "skill": [
+            {
+                "id": 1,
+                "fullName": "电竞荣耀",
+                "firstName": "电竞人才百万缺口",
+                "pic1": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t11827/19/459031207/215409/fca6ff73/59f0569dN0cca8a4c.jpg!q70.jpg.dpg",
+                "pic2": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t30742/186/1618456709/618922/87790a2a/5ce66b7dN03f83be6.jpg!q70.jpg.dpg"
+            },
+            {
+                "id": 2,
+                "fullName": "一表人才",
+                "firstName": "天梭·此刻由我",
+                "pic1": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/106845/23/5940/266519/5df07f7cEc0cff882/12523df03b80a187.jpg!q70.jpg.dpg",
+                "pic2": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/59729/4/15456/643228/5dd10b56E3e07cb31/ce1667d208956974.jpg!q70.jpg.dpg"
+            }
+        ]
+    },
+    {
+        "fourth": [
+            {
+                "id": 1,
+                "fullName": "海尔家电",
+                "firstName": "家电盛宴",
+                "pic": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+            },
+            {
+                "id": 2,
+                "fullName": "颜值正义",
+                "firstName": "美颜换肤",
+                "pic": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/50770/40/12895/194638/5ddcf568E7dbe3b03/d5e0962d133b41ab.jpg!q70.jpg.dpg"
+            },
+            {
+                "id": 3,
+                "fullName": "史话秘书",
+                "firstName": "安抚小情绪",
+                "pic": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t2470/190/733146502/164951/8e9aa164/5626055aN9393c268.jpg!q70.jpg.dpg"
+            },
+            {
+                "id": 4,
+                "fullName": "放肆玩",
+                "firstName": "玩出精彩",
+                "pic": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t9517/304/2550795578/312854/f88f84/59f94161N31a2f679.jpg!q70.jpg.dpg"
+            }
+        ]
+    },
+    {
+        "guang": [
+            {
+                "id": 1,
+                "fullName": "免息星球",
+                "firstName": "白条免息够",
+                "pic": "https://m.360buyimg.com/n1/s150x150_jfs/t29566/227/1464891645/10350/a5b133e2/5ce20cdcNd9cdd972.jpg!q70.jpg.dpg"
+            },
+            {
+                "id": 2,
+                "fullName": "每日特价",
+                "firstName": "9.9疯抢",
+                "pic": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/89676/29/5758/20628/5def37a2Eff165a1c/b41fe7c9ac32f16f.jpg!q70.jpg.dpg"
+            },
+            {
+                "id": 3,
+                "fullName": "品牌闪购",
+                "firstName": "大牌好价",
+                "pic": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/88638/33/5675/28468/5def3b04E728e691f/8997a8bf07db66b7.png!q70.jpg.dpg"
+            },
+            {
+                "id": 4,
+                "fullName": "京东直播",
+                "firstName": "边看边买",
+                "pic": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/79087/9/714/26464/5cef9636Ea4fe2ba8/90f1c44b1b1f6e2e.png!q70.jpg.dpg"
+            },
+            {
+                "id": 5,
+                "fullName": "排行榜",
+                "firstName": "销量排行榜推荐",
+                "pic": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/71612/30/758/62076/5cefa5a6E2494c8c2/13aac3e0bb1b4e55.png!q70.jpg.dpg"
+            },
+            {
+                "id": 6,
+                "fullName": "拍拍好物",
+                "firstName": "iphone 5折起",
+                "pic": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/76945/35/760/26244/5cef9705E501242ee/c56b89c0946438ef.jpg!q70.jpg.dpg"
+            },
+            {
+                "id": 7,
+                "fullName": "新品首发",
+                "firstName": "京东小魔方",
+                "pic": "https://m.360buyimg.com/n1/s150x150_jfs/t11128/25/2817168750/9187/72b53c/5cdaa568N8f652eb8.jpg!q70.jpg.dpg"
+            },
+            {
+                "id": 8,
+                "fullName": "发现好物",
+                "firstName": "教你买买买",
+                "pic": "https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/50174/30/1230/9784/5cef98bfE318f8d24/4720dc4079dd568b.jpg!q70.jpg.dpg"
+            }
+        ]
     }
-
 ]

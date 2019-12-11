@@ -22,6 +22,7 @@
 // @ is an alias to /src
 import test from "./test";
 import header from './header'
+import {getList} from '@/api/classify.js'
 export default {
   name: "XXX",
   data() {
@@ -55,9 +56,17 @@ export default {
         "钟表珠宝",
         "玩具乐器"
       ],
-
       index: 0
     };
+  },
+  computed: {
+    
+  },
+  created() {
+    // this.$store.dispatch('getClassifyList')
+    getList().then(data=>{
+      console.log(data)
+    })
   },
   methods: {
     back() {
@@ -75,9 +84,7 @@ export default {
         let height = item.offsetHeight;
         let allHeight = box.offsetHeight;
         let ulHeight=ul.offsetHeight
-        // let t= allHeight-ulHeight;
-        let n = 1;
-        // console.log(ul,-height*index)
+        
         ul.style.transform = `translateY(${-height * index +allHeight/2>=0?0:-height * index +allHeight/2<=-ulHeight+allHeight?-ulHeight+allHeight:-height * index +allHeight/2}px)`;
         console.log(-height * index +allHeight/2,-ulHeight)
         // return change(index)

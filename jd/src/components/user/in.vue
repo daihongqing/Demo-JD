@@ -442,7 +442,7 @@
 </template>
 <script>
 // @ is an alias to /src
-import Acco from "./acco";
+// import Acco from "./acco";
 export default {
   name: "user",
   data() {
@@ -453,7 +453,7 @@ export default {
     };
   },
   components: {
-    acco: Acco
+    // acco: Acco
   },
   methods: {
     showPopup() {
@@ -467,7 +467,7 @@ export default {
       this.show = false;
     },
     cli(){
-      this.$router.push("acco")
+      // this.$router.push("acco")
     }
   }
 };

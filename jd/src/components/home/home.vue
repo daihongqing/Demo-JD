@@ -142,6 +142,7 @@
           />
         </li>
       </ul>
+
       <!--东家小院  -->
       <div class="xiaoyuan">
         <img
@@ -149,21 +150,101 @@
           alt
         />
       </div>
-      <div class="sport">
-        <van-grid :column-num="2" border :gutter="10" :square="true">
-          <van-grid-item v-for="value in 2" :key="value" default>
+      <div class="footerBox">
+        <!-- 上面 -->
+        <div class="sport">
+          <div class="computer">
             <span>
               <h4 class="skil">电竞荣耀</h4>
               <span>电竞人才百万缺口</span>
             </span>
-            <van-image src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t11827/19/459031207/215409/fca6ff73/59f0569dN0cca8a4c.jpg!q70.jpg.dpg" />
-           
-          </van-grid-item>
-        </van-grid>
-        <van-grid :column-num="4" border :gutter="10">
-          <van-grid-item v-for="value in 4" :key="value" ></van-grid-item>
-        </van-grid>
+            <div class="both">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t11827/19/459031207/215409/fca6ff73/59f0569dN0cca8a4c.jpg!q70.jpg.dpg"
+              />
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t30742/186/1618456709/618922/87790a2a/5ce66b7dN03f83be6.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+          <div class="computer">
+            <span>
+              <h4 class="skil">电竞荣耀</h4>
+              <span>电竞人才百万缺口</span>
+            </span>
+            <div class="both">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t11827/19/459031207/215409/fca6ff73/59f0569dN0cca8a4c.jpg!q70.jpg.dpg"
+              />
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t30742/186/1618456709/618922/87790a2a/5ce66b7dN03f83be6.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+        </div>
+        <!-- 下面 -->
+        <div class="fourthBox">
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+        </div>
       </div>
+
       <!-- 每日逛 -->
       <div class="guang">
         <img
@@ -171,29 +252,160 @@
           alt
         />
       </div>
-    </div>
-    <!-- 京东快报 -->
-    <div class="quire">
-      <div class="lt">京东快报</div>
-
-      <van-swipe style="height: 5vw;" :autoplay="2000" :show-indicators="false" vertical>
-        <van-swipe-item>
-          <div>
-            <i style="color:red">最新</i>
-            <span>联想小新Pro，舒适的视觉体验真不错</span>
+      <div class="bottom">
+        <div class="fourthBox">
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
           </div>
-        </van-swipe-item>
-        <van-swipe-item>
-          <i style="color:red">最热</i>
-          <span>联想小新Pro，舒适的视觉体验</span>
-        </van-swipe-item>
-        <van-swipe-item>
-          <i style="color:red">推荐</i>
-          <span>联想小新Pro，舒适的视觉体验坚持是都会发生两顿饭了</span>
-        </van-swipe-item>
-      </van-swipe>
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+        </div>
+        <div class="fourthBox">
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+          <div class="one">
+            <div class="font">
+              <span>
+                <h4>海尔家电</h4>
+                <span>家电盛宴</span>
+              </span>
+            </div>
+            <div class="imgbox">
+              <img
+                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
+                alt
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <div class="rt">更多</div>
+    <!--灰色背景部分  -->
+    <div class="mainBox">
+      <!-- 京东快报 -->
+      <div class="quire">
+        <div class="lt">京东快报</div>
+
+        <van-swipe style="height: 5vw;" :autoplay="2000" :show-indicators="false" vertical>
+          <van-swipe-item>
+            <div>
+              <i style="color:red">最新</i>
+              <span>联想小新Pro，舒适的视觉体验真不错</span>
+            </div>
+          </van-swipe-item>
+          <van-swipe-item>
+            <i style="color:red">最热</i>
+            <span>联想小新Pro，舒适的视觉体验</span>
+          </van-swipe-item>
+          <van-swipe-item>
+            <i style="color:red">推荐</i>
+            <span>联想小新Pro，舒适的视觉体验坚持是都会发生两顿饭了</span>
+          </van-swipe-item>
+        </van-swipe>
+
+        <div class="rt">更多</div>
+      </div>
+      <!-- 为你推荐 -->
+      <div class="title">
+        <img
+          src="https://img11.360buyimg.com/jdphoto/jfs/t1/31601/22/15554/14040/5cc2a86fEbdb1098b/88174b36f85283b6.png"
+          alt
+        />
+      </div>
+      <!-- 懒加载部分 共用组件 -->
+
     </div>
   </div>
 </template>
@@ -282,7 +494,6 @@ export default {
       img {
         width: 100%;
         height: 100%;
-        height: 100%;
       }
     }
   }
@@ -341,15 +552,44 @@ export default {
         }
       }
     }
-    .sport {
-      text-align: left;
-      span:nth-child(2) {
-        font-size: 14px;
+    .footerBox {
+      .sport {
+        text-align: left;
+        display: flex;
+        width: 100%;
+        .computer {
+          flex: 1;
+          background: #fff;
+          margin-right: 3px;
+          padding: 4px;
+          span:nth-child(2) {
+            font-size: 14px;
+          }
+          .skil {
+            color: transparent;
+            background: linear-gradient(90deg, #45caff, #1471fb);
+            background-clip: text;
+          }
+          .both {
+            display: flex;
+            img {
+              flex: 1;
+              width: 3vw;
+            }
+          }
+        }
       }
-      .skil {
-        color: transparent;
-        background: linear-gradient(90deg, #45caff, #1471fb);
-        background-clip: text;
+    }
+    .fourthBox {
+      width: 100%;
+      display: flex;
+      .one {
+        flex: 1;
+        margin: 1vw 1vw 0 0;
+        background: #fff;
+        img {
+          width: 100%;
+        }
       }
     }
     .xiaoyuan,
@@ -360,24 +600,42 @@ export default {
       }
     }
   }
-  .quire {
-    overflow: hidden;
-    display: flex;
-    div {
-      width: 100px;
+  .mainBox {
+    background: #eee;
+    .quire {
       overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      i {
-        font-size: 4vw;
-        margin-right: 10px;
+      display: flex;
+      margin: 0 5vw 2vw 5vw;
+      border-radius: 5px;
+      background: #fff;
+      div {
+        width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        i {
+          font-size: 4vw;
+          margin-right: 10px;
+        }
+        span {
+          font-size: 3.8vw;
+        }
       }
-      span {
-        font-size: 3.8vw;
+      .van-swipe {
+        flex: 1;
       }
     }
-    .van-swipe {
-      flex: 1;
+    .title {
+      display: flex;
+      margin: 0 5vw;
+      img {
+        flex: 1;
+        width: 100%;
+      }
+    }
+    .lazyBox {
+      border-top: 1px #f0f2f5 solid;
+      
     }
   }
 }
