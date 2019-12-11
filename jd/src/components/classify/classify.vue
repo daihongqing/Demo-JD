@@ -1,43 +1,6 @@
 <template>
   <div>
-    <header>
-      <span class="back" @click="back"></span>
-      <van-search class="inp" placeholder="搜索商品/店铺" v-model="value" style="width:88vw" />
-      <van-icon @click="hide" name="weapp-nav" class="menu" size="5vw" />
-      <div class="rightMenu" v-show="flag">
-        <div class="sanjiao"></div>
-        <div>
-          <router-link to="/index/home">
-            <i class="iconfont icon-yemian-copy-copy1"></i>
-            <span>首页</span>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/index/classify">
-            <i class="iconfont icon-fenlei"></i>
-            <span>分类搜索</span>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/index/shopping">
-            <i class="iconfont icon-cart"></i>
-            <span>购物车</span>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/index/user">
-            <i class="iconfont icon-mainoff"></i>
-            <span>我的京东</span>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/index/home">
-            <i class="iconfont icon-liulanjilu"></i>
-            <span>浏览记录</span>
-          </router-link>
-        </div>
-      </div>
-    </header>
+    <header-div></header-div>
     <div class="text">
       <div class="left">
         <van-sidebar id="leftNav" v-model="activeKey">
@@ -58,7 +21,7 @@
 <script>
 // @ is an alias to /src
 import test from "./test";
-
+import header from './header'
 export default {
   name: "XXX",
   data() {
@@ -96,9 +59,6 @@ export default {
       index: 0
     };
   },
-  created() {},
-  computed: {},
-  mounted() {},
   methods: {
     back() {
       this.$router.push("/index/home");
@@ -109,9 +69,9 @@ export default {
     change(index) {
       //  console.log(index);
       this.$nextTick(() => {
-        let item = document.getElementById("navItem");
-        let ul = document.getElementById("leftNav");
-        let box = document.getElementsByClassName("left")[0];
+        let item = document.getElementById("navItem");//每一个导航
+        let ul = document.getElementById("leftNav");//最高的div
+        let box = document.getElementsByClassName("left")[0];//短的div
         let height = item.offsetHeight;
         let allHeight = box.offsetHeight;
         let ulHeight=ul.offsetHeight
@@ -125,11 +85,12 @@ export default {
     }
   },
   components: {
-    "my-test": test
+    "my-test": test,
+    'header-div':header
   }
 };
 </script>
-<style lang="less">
+<style lang="less" scoped>
 header {
   position: fixed;
 }

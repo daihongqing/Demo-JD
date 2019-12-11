@@ -3,13 +3,15 @@
     <div v-for="i in 4" :key="i" class="allBox">
       <h4 class="title">热门品牌</h4>
       <ul>
-        <li v-for="i in 10" :key="i" class="imgBox">
-          <img
-            src="https://img30.360buyimg.com/focus/s140x140_jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png"
-            alt
-          />
-          <i class="test">小米</i>
-        </li>
+        <router-link to>
+          <li v-for="i in 10" :key="i" class="imgBox">
+            <img
+              src="https://img30.360buyimg.com/focus/s140x140_jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png"
+              alt
+            />
+            <i class="test">小米</i>
+          </li>
+        </router-link>
       </ul>
     </div>
   </div>
@@ -28,14 +30,14 @@ export default {
 .box {
   width: 79vw;
   float: right;
-//   margin-left: 20vw;
+  //   margin-left: 20vw;
   margin-top: 13vw;
   margin-bottom: 15vw;
-// position: absolute;
-h4{
+  // position: absolute;
+  h4 {
     text-align: left;
     padding: 2vw;
-}
+  }
   ul {
     float: left;
     padding: 5vw;

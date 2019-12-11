@@ -2,7 +2,7 @@ import shopping from '../components/shopping/shopping.vue'
 
 export default[
     {
-        path:'/shopping',
+        path:'index/shopping',
         name:'shopping',
         component:shopping,
         children:[
