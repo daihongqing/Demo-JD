@@ -12,7 +12,7 @@
     <!-- 轮播图 -->
     <div class="slide">
       <van-swipe :autoplay="3000" indicator-color="white">
-        <van-swipe-item v-for="item in homeSlideList" :key="item.id">
+        <van-swipe-item v-for="item in homeSlideList[0]['swiper']" :key="item.id">
           <img :src="item.pic" />
         </van-swipe-item>
       </van-swipe>
@@ -20,22 +20,22 @@
     <!-- 轮播图方格子 -->
     <van-swipe indicator-color="red">
       <van-swipe-item>
-        <van-grid :border="false" icon-size="45.6"   :column-num="5">
+        <van-grid :border="false" icon-size="47" :square="true" :column-num="5">
           <van-grid-item
-            v-for="value in 10"
-            :key="value"
-            icon="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png.webp"
-            text="京东超市"
+            v-for="i in homeSlideList[1]['card1']"
+            :key="i.id"
+            :icon="i.pic"
+            :text="i.title"
           ></van-grid-item>
         </van-grid>
       </van-swipe-item>
       <van-swipe-item>
-        <van-grid :border="false" icon-size="45.6"  :column-num="5">
+        <van-grid :border="false" icon-size="47" :square="true" :column-num="5">
           <van-grid-item
-            v-for="value in 10"
-            :key="value"
-            icon="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png.webp"
-            text="京东超市"
+            v-for="i in homeSlideList[2]['card2']"
+            :key="i.id"
+            :icon="i.pic"
+            :text="i.title"
           ></van-grid-item>
         </van-grid>
       </van-swipe-item>
@@ -63,6 +63,7 @@
     </div>
     <!-- 带有背景色的部分 -->
     <div class="seckill">
+      <!-- 京东秒杀 -->
       <div class="jdSlide">
         <div class="lt">
           <span
@@ -81,57 +82,18 @@
         </div>
         <div class="imgBox">
           <ul>
-            <li>
-              <img
-                src="https://img14.360buyimg.com/n1/s150x150_jfs/t1/50389/36/7786/321540/5d561738Ede7970e2/81f0bb0f1d51264e.jpg.dpg"
-                alt
-              />
-              <span style="color:red; font-size: 16px; font-weight: 600; ">￥250</span>
-              <span style="color:#999;text-decoration:line-through;">￥360</span>
-            </li>
-            <li>
-              <img
-                src="https://img14.360buyimg.com/n1/s150x150_jfs/t1/50389/36/7786/321540/5d561738Ede7970e2/81f0bb0f1d51264e.jpg.dpg"
-                alt
-              />
-              <span>￥250</span>
-              <span>￥360</span>
-            </li>
-            <li>
-              <img
-                src="https://img14.360buyimg.com/n1/s150x150_jfs/t1/50389/36/7786/321540/5d561738Ede7970e2/81f0bb0f1d51264e.jpg.dpg"
-                alt
-              />
-              <span>￥250</span>
-              <span>￥360</span>
-            </li>
-            <li>
-              <img
-                src="https://img14.360buyimg.com/n1/s150x150_jfs/t1/50389/36/7786/321540/5d561738Ede7970e2/81f0bb0f1d51264e.jpg.dpg"
-                alt
-              />
-              <span>￥250</span>
-              <span>￥360</span>
-            </li>
-            <li>
-              <img
-                src="https://img14.360buyimg.com/n1/s150x150_jfs/t1/50389/36/7786/321540/5d561738Ede7970e2/81f0bb0f1d51264e.jpg.dpg"
-                alt
-              />
-              <span>￥250</span>
-              <span>￥360</span>
-            </li>
-            <li>
-              <img
-                src="https://img14.360buyimg.com/n1/s150x150_jfs/t1/50389/36/7786/321540/5d561738Ede7970e2/81f0bb0f1d51264e.jpg.dpg"
-                alt
-              />
-              <span>￥250</span>
-              <span>￥360</span>
+            <!-- runM -->
+            <li v-for="item in homeSlideList[3]['runM']" :key="item.id">
+              <img :src="item.pic" alt />
+              <span
+                style="color:red; font-size: 16px; font-weight: 600;display: block; "
+              >{{item.original}}</span>
+              <span style="color:#999;text-decoration:line-through;">{{item.present}}</span>
             </li>
           </ul>
         </div>
       </div>
+      <!--广告  -->
       <div class="happy">
         <div>
           <img
@@ -146,13 +108,14 @@
           />
         </div>
       </div>
-      <!-- 又一个广告 -->
+      <!--又一个广告  -->
       <div class="title">
         <img
           src="https://m.360buyimg.com/mobilecms/s750x200_jfs/t1/91992/11/5530/88892/5dee11b7E46e12087/df7ce9f0857e22fc.png!q70.webp"
           alt
         />
       </div>
+      <!-- 四个框 -->
       <ul class="gird">
         <li>
           <img
@@ -179,19 +142,65 @@
           />
         </li>
       </ul>
+      <!--东家小院  -->
       <div class="xiaoyuan">
         <img
           src="https://m.360buyimg.com/mobilecms/s750x80_jfs/t1/104532/40/2146/24646/5dcc2957E83954979/5ec2bb870605dcb3.png!q70.jpg.dpg"
           alt
         />
       </div>
+      <div class="sport">
+        <van-grid :column-num="2" border :gutter="10" :square="true">
+          <van-grid-item v-for="value in 2" :key="value" default>
+            <span>
+              <h4 class="skil">电竞荣耀</h4>
+              <span>电竞人才百万缺口</span>
+            </span>
+            <van-image src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t11827/19/459031207/215409/fca6ff73/59f0569dN0cca8a4c.jpg!q70.jpg.dpg" />
+           
+          </van-grid-item>
+        </van-grid>
+        <van-grid :column-num="4" border :gutter="10">
+          <van-grid-item v-for="value in 4" :key="value" ></van-grid-item>
+        </van-grid>
+      </div>
+      <!-- 每日逛 -->
+      <div class="guang">
+        <img
+          src="https://m.360buyimg.com/mobilecms/s750x80_jfs/t1/83520/33/13546/23804/5dcc2979E64764662/4654df31323ded7c.png!q70.jpg.dpg"
+          alt
+        />
+      </div>
+    </div>
+    <!-- 京东快报 -->
+    <div class="quire">
+      <div class="lt">京东快报</div>
+
+      <van-swipe style="height: 5vw;" :autoplay="2000" :show-indicators="false" vertical>
+        <van-swipe-item>
+          <div>
+            <i style="color:red">最新</i>
+            <span>联想小新Pro，舒适的视觉体验真不错</span>
+          </div>
+        </van-swipe-item>
+        <van-swipe-item>
+          <i style="color:red">最热</i>
+          <span>联想小新Pro，舒适的视觉体验</span>
+        </van-swipe-item>
+        <van-swipe-item>
+          <i style="color:red">推荐</i>
+          <span>联想小新Pro，舒适的视觉体验坚持是都会发生两顿饭了</span>
+        </van-swipe-item>
+      </van-swipe>
+
+      <div class="rt">更多</div>
     </div>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
-import homeSlideList from "@/api/home.js";
+// import homeSlideList from "@/api/home.js";
 export default {
   name: "home",
   data() {
@@ -202,8 +211,8 @@ export default {
   },
   created() {
     this.$store.dispatch("changeSdList");
-    console.log(this.homeSlideList);
   },
+
   computed: {
     ...mapState(["homeSlideList"])
   }
@@ -262,7 +271,9 @@ export default {
       border-radius: 10px;
     }
   }
-
+  .van-grid {
+    margin: 5px 0 18px 0;
+  }
   .tab {
     width: 100%;
     display: flex;
@@ -288,11 +299,12 @@ export default {
       }
       ul {
         width: 100%;
-        padding-top: 4vw;
+        padding: 2vw 0;
         display: flex;
         overflow-y: scroll;
         li {
           flex: 1;
+          margin-right: 2vw;
           img {
             width: 18.5vw;
           }
@@ -329,11 +341,43 @@ export default {
         }
       }
     }
-    .xiaoyuan {
+    .sport {
+      text-align: left;
+      span:nth-child(2) {
+        font-size: 14px;
+      }
+      .skil {
+        color: transparent;
+        background: linear-gradient(90deg, #45caff, #1471fb);
+        background-clip: text;
+      }
+    }
+    .xiaoyuan,
+    .guang {
       width: 100%;
       img {
         width: 100%;
       }
+    }
+  }
+  .quire {
+    overflow: hidden;
+    display: flex;
+    div {
+      width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      i {
+        font-size: 4vw;
+        margin-right: 10px;
+      }
+      span {
+        font-size: 3.8vw;
+      }
+    }
+    .van-swipe {
+      flex: 1;
     }
   }
 }

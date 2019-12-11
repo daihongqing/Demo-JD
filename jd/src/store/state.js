@@ -1,3 +1,4 @@
 export default {
-	homeSlideList:[]
+	homeSlideList:[],
+	classifyList:[]
 }

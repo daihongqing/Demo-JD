@@ -77,14 +77,7 @@ export default {
   methods: {},
   components: {},
   watch: {
-    'this.pathname':function(newVal,oldVal){
-      console.log(newVal,oldVal)
-      if(newVal==='/index/home'){
-        console.log(111)
-      }else if(newVal==='/index/classify'){
-        console.log(222)
-      }
-    }
+    
   }
 };
 </script>
@@ -107,7 +100,7 @@ nav {
     flex: 1;
     text-align: center;
     // border-top: 1px #ccc solid;
-    padding: 9px;
+    // padding: 9px;
     > a {
       color: gray;
       width: 100%;
