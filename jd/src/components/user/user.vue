@@ -2,9 +2,9 @@
   <div class="Box">
     <!-- 头部 -->
     <div class="header">
-      <van-icon class="lt a" name="arrow-left" size="20px" />
+      <van-icon class="lt a" name="arrow-left" size="20px" @click="cl" />
       <div class="miJD">我的京东</div>
-      <van-icon class="rt dot" name="ellipsis" size="20px" @click="cli"/>
+      <van-icon class="rt dot" name="ellipsis" size="20px" @click="cli" />
     </div>
     <in></in>
     <navigation v-show="a"></navigation>
@@ -13,7 +13,7 @@
 <script>
 // @ is an alias to /src
 import In from "./in";
-import Navigation from '../navigation'
+import Navigation from "../navigation";
 export default {
   name: "user",
   data() {
@@ -23,9 +23,12 @@ export default {
   },
   components: {
     in: In,
-    navigation:Navigation
+    navigation: Navigation
   },
   methods: {
+    cl() {
+      this.$router.back();
+    },
     cli() {
       this.a = !this.a;
     }
@@ -35,6 +38,5 @@ export default {
 <style lang="less">
 .Box {
   background: #f2f3f5;
-   
 }
 </style> 
