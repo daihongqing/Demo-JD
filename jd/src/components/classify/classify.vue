@@ -6,8 +6,8 @@
         <van-sidebar id="leftNav" v-model="activeKey">
           <van-sidebar-item
             v-for=" item in nav"
-            :title="item"
-            :key="item"
+            :title="item.til"
+            :key="item.til"
             @click="change"
             id="navItem"
           ></van-sidebar-item>
@@ -65,7 +65,11 @@ export default {
   created() {
     // this.$store.dispatch('getClassifyList')
     getList().then(data=>{
-      console.log(data)
+      if(data.code==0){
+        this.nav=data.data[0].title
+         console.log(data.data[0].title,1111)
+      }
+     
     })
   },
   methods: {
