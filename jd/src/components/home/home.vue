@@ -175,10 +175,6 @@
     <!-- 京东快报 -->
     <div class="quire">
       <div class="lt">京东快报</div>
-<<<<<<< HEAD
-=======
-
->>>>>>> c5c08d897bc6e8f9be71e11029246428b27cdffa
       <van-swipe style="height: 5vw;" :autoplay="2000" :show-indicators="false" vertical>
         <van-swipe-item>
           <div>
@@ -195,10 +191,6 @@
           <span>联想小新Pro，舒适的视觉体验坚持是都会发生两顿饭了</span>
         </van-swipe-item>
       </van-swipe>
-<<<<<<< HEAD
-=======
-
->>>>>>> c5c08d897bc6e8f9be71e11029246428b27cdffa
       <div class="rt">更多</div>
     </div>
   </div>
