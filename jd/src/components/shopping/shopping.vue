@@ -103,18 +103,7 @@
             <van-stepper v-model="i.num" input-width="40px" button-size="32px" />
           </div>
         </van-card>
-        <div class="foot">
-          <van-checkbox class="lt" style="margin-top:3vw" checked-color="red" v-model="checkAll">全选</van-checkbox>
-          <span>
-            总计金额是
-            <i>${{total}}</i>
-          </span>
-          <van-button class="btn" type="danger">去结算</van-button>
-        </div>
-        <div class="foot foot1" v-show="appear">
-          <van-checkbox class="lt" style="margin-top:3vw" checked-color="red" v-model="checkAll">全选</van-checkbox>
-          <van-button class="btn" @click="del(i.ispitch)" type="danger">删除</van-button>
-        </div>
+      
       </van-checkbox>
       <!-- <van-checkbox name="b">复选框 b</van-checkbox>
       <van-checkbox name="c">复选框 c</van-checkbox>-->
@@ -126,7 +115,7 @@
         总计金额是
         <i>${{total}}</i>
       </span>
-      <van-button class="btn" type="danger">去结算</van-button>
+      <van-button @click="submit" class="btn" type="danger">去结算</van-button>
     </div>
     <div class="foot foot1" v-show="appear">
       <van-checkbox class="lt" style="margin-top:3vw" checked-color="red" v-model="checkAll">全选</van-checkbox>
@@ -212,7 +201,12 @@ export default {
     }
   },
   methods: {
-    back() {},
+    submit(){
+       this.$router.push('/order')
+    },
+    back() {
+      this.$router.back()
+    },
     c1() {
       this.appear = !this.appear;
     },
@@ -229,7 +223,7 @@ export default {
 <style lang="less" scoped>
 .foot {
   position: fixed;
-  bottom: 46px;
+  bottom: 0;
   width: 100vw;
   height: 11vw;
   left: 0;
