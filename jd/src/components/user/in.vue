@@ -465,7 +465,7 @@ export default {
       this.show = false;
     },
     cli(){
-      this.$router.push("/acco")
+      this.$router.push("/index/acco")
     }
   }
 };

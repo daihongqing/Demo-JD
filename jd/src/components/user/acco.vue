@@ -2,14 +2,10 @@
   <div class="Box">
     <!-- 头部 -->
     <div class="header">
-      <div class="a lt" @click="ck">
-        <img src="../../assets/back.png" alt />
-      </div>
-      <div class="miJD">账号管理</div>
-      <div class="dot rt">
-        <img src="../../assets/dot.png" alt />
-      </div>
-    </div> 
+      <van-icon class="lt a" name="arrow-left" size="20px" @click="ck"/>
+      <div class="miJD">我的京东</div>
+      <van-icon class="rt dot" name="ellipsis" size="20px" @click="cli" />
+    </div>
     <div class="accountArea">
       <section class="account_section_v2">
         <div class="account_section_title">
@@ -132,59 +128,54 @@
         />退出登录
       </a>
     </div>
+    <navigation v-show="a"></navigation>
   </div>
 </template>
 <script>
 // @ is an alias to /src
+import Navigation from "../navigation";
 export default {
   name: "acco",
   data() {
-    return {};
+    return {
+      a: false
+    };
   },
-  components: {},
+  components: {
+    navigation: Navigation
+  },
   methods: {
-      ck(){
-          this.$router.push("/index/user")
-      }
-  },
+    ck() {
+      this.$router.push("/index/user");
+    },
+    cli() {
+      this.a = !this.a;
+    }
+  }
 };
 </script>
 <style lang="less">
 .Box {
   background: #f2f3f5;
   .header {
-    position: relative;
-    border-bottom: 1px solid #e5e5e5;
-    min-height: 44px;
     background: #fff;
+    position: relative;
+    width: 100%;
+    height: 12vw;
     // border-bottom: 1px solid #ccc;
     .a {
       position: absolute;
-      //   background: #000;
-      width: 11vw;
-      height: 12vw;
-      img {
-        width: 20px;
-        height: 20px;
-        margin: 12px 0 0 3px;
-      }
+      top: 30%;
+      left: 8px;
     }
     .miJD {
       height: 12vw;
       line-height: 12vw;
     }
     .dot {
-      overflow: hidden;
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 11vw;
-      height: 12vw;
-      img {
-        display: inline-block;
-        margin: 20px 12px 20px 10px;
-        width: 20px;
-      }
+      top: 30%;
+      right: 8px;
     }
   }
   .accountArea {
@@ -338,7 +329,7 @@ export default {
       margin-left: 10px;
       padding: 6px 0;
       position: relative;
-      >img {
+      > img {
         width: 18px;
         height: 18px;
         padding-right: 3px;
