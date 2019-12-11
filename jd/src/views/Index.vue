@@ -14,7 +14,7 @@
         <router-link to="/index/classify">
           <van-icon name="apps-o"></van-icon>
           <div>分类</div>
-        </router-link>
+        </router-link>    
       </div>
       <div>
         <router-link to="/index/surprise">
