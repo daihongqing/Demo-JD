@@ -104,8 +104,7 @@ nav {
   > div {
     flex: 1;
     text-align: center;
-    // border-top: 1px #ccc solid;
-    padding: 9px;
+    padding: 4px;
     > a {
       color: gray;
       width: 100%;
