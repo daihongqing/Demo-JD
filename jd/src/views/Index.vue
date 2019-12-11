@@ -77,14 +77,7 @@ export default {
   methods: {},
   components: {},
   watch: {
-    'this.pathname':function(newVal,oldVal){
-      console.log(newVal,oldVal)
-      if(newVal==='/index/home'){
-        console.log(111)
-      }else if(newVal==='/index/classify'){
-        console.log(222)
-      }
-    }
+    
   }
 };
 </script>
@@ -101,10 +94,17 @@ nav {
   bottom: 0;
   left: 0;
   background: #fff;
-  > div {
+  box-shadow: 0 0 10px 0 hsla(0,6%,58%,.6);
+  -webkit-box-shadow: 0 0 10px 0 hsla(0,6%,58%,.6);
+  div {
     flex: 1;
     text-align: center;
+<<<<<<< HEAD
     padding: 4px;
+=======
+    // border-top: 1px #ccc solid;
+    // padding: 9px;
+>>>>>>> c5c08d897bc6e8f9be71e11029246428b27cdffa
     > a {
       color: gray;
       width: 100%;
