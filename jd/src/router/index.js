@@ -6,7 +6,6 @@ import shopping from './shopping'
 import surprise from './surprise'
 import user from './user'
 import home from './home'
-import acco from './acco'
 
 
 Vue.use(VueRouter)
@@ -17,12 +16,17 @@ const routes = [
     name: 'Index',
     redirect: '/index/home',
     component: Index,
-    children: home.concat(classify, shopping, surprise, user,acco)
+    children: home.concat(classify, shopping, surprise, user)
   },
   {
     path: '/login',
     name: 'login',
     component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+  },
+  {
+    path: '/acco',
+    name: 'acco',
+    component: () => import(/* webpackChunkName: "about" */ '../components/user/acco.vue')
   }
 ]
 
