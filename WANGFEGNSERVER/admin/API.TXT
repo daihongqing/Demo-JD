@@ -7,7 +7,22 @@ RESULT：{
 	code:0  //=>0成功 1失败
 	codeText:'OK',  //=>CODE状态码描述
 }
-
+----
+获取用户详细信息
+URL：/user/login
+METHOD：get
+PARAMS：userid
+RESULT：{
+	code:0  //=>0成功 1失败
+	codeText:'OK',  //=>CODE状态码描述
+    data:{
+    "userid": "1",
+    "phone": "13717808050",
+    "password": "123456789",
+    "name":"王峰",
+    "pic":"http://........"
+    "state": 0
+}
 ----
 检测是否登录
 URL：/user/login
@@ -60,3 +75,31 @@ RESULT：{
 		{title:[{itl:xxx}]},
 		{hot:[{id:xxx,title:xxx,"children": [{"pic_url": "https://b4.png","describe": "小米"}]},
        ]
+----
+SHOPPINGDATA
+URL：/shopping/shopCar
+METHOD：GET
+PARAMS：//不传是获取当前用户购物车信息
+        productId, // 商品Id
+        productName, // 商品名称
+        salePrice, // 商品价格
+        productImage, // 图片地址
+        checked, // 是否选中
+        productNum // 商品数量
+
+RESULT：{
+	code:0  
+	codeText:'OK'
+    data:{
+        "userid": 1,
+        "children": [{
+            "price": "7199",
+            "desc": "Apple iPhone XS Max (A2104) 256GB 金色 移动联通电信4G手机 双卡双待",
+            "pic": "https://img10.360buyimg.com/mobilecms/s234x234_jfs/t1/84878/7/4846/223972/5de8fc61E3a7c61cc/f207af9589b059cb.jpg!q70.dpg.webp",
+            "color": "金色",
+            "version": "256GB",
+            "vay": "公开版"
+        },{
+
+        }]
+    },
