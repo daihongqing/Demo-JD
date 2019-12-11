@@ -153,19 +153,14 @@
       <div class="footerBox">
         <!-- 上面 -->
         <div class="sport">
-          <div class="computer">
+          <div class="computer" v-for="item in homeSlideList[4]['skill']" :key="item.id">
             <span>
-              <h4 class="skil">电竞荣耀</h4>
-              <span>电竞人才百万缺口</span>
+              <h4 class="skil">{{item.fullName}}</h4>
+              <span>{{item.firstName}}</span>
             </span>
             <div class="both">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t11827/19/459031207/215409/fca6ff73/59f0569dN0cca8a4c.jpg!q70.jpg.dpg"
-              />
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t30742/186/1618456709/618922/87790a2a/5ce66b7dN03f83be6.jpg!q70.jpg.dpg"
-                alt
-              />
+              <img :src="item.pic1" />
+              <img  :src="item.pic2" />
             </div>
           </div>
           <div class="computer">
