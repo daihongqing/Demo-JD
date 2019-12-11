@@ -8,8 +8,7 @@
         <div class="sanjiao"></div>
         <div>
           <router-link to="/index/home">
-            <i class="iconfont ic
-            on-yemian-copy-copy1"></i>
+            <i class="iconfont ic on-yemian-copy-copy1"></i>
             <span>首页</span>
           </router-link>
         </div>
@@ -54,45 +53,84 @@
       <van-button @click="c1" class="rt" type="primary" size="small">编辑商品</van-button>
       <van-checkbox class="lt" v-model="checkAll">鸿星尔克官方服饰旗舰店</van-checkbox>
       <!-- <van-checkbox-group v-model="checked"> -->
-        <van-checkbox
-          v-for="i in ary"
-          :key="i.value"
-          class="lt"
-          style="width:100%"
-          :name="i.value"
-          v-model="i.ispitch"
+      <van-checkbox
+        v-for="i in ary"
+        :key="i.value"
+        class="lt"
+        style="width:100%"
+        :name="i.value"
+        v-model="i.ispitch"
+      >
+        <van-card
+          :num="i.num"
+          :price="i.money"
+          desc="正黑9054，L"
+          title="鸿星尔克男短袖2019夏季新品男子圆领t恤针织衫时尚潮流运动T恤男 正黑9054 L"
+          thumb="//img10.360buyimg.com/mobilecms/s337x337_jfs/t1/87434/31/5765/212386/5def62a2Ef9ec7875/4fc44b76180023c8.jpg!q70.dpg.webp"
         >
-          <van-card
-            :num="i.num"
-            :price="i.money"
-            desc="正黑9054，L"
-            title="鸿星尔克男短袖2019夏季新品男子圆领t恤针织衫时尚潮流运动T恤男 正黑9054 L"
-            thumb="//img10.360buyimg.com/mobilecms/s337x337_jfs/t1/87434/31/5765/212386/5def62a2Ef9ec7875/4fc44b76180023c8.jpg!q70.dpg.webp"
-          >
-            <div slot="tags">
-              <van-tag class="lt" plain type="danger">满300减30</van-tag>
-              <van-tag class="lt" plain type="danger">白条3期免息</van-tag>
-            </div>
-            <div slot="footer">
-              <van-stepper v-model="i.num" input-width="40px" button-size="32px" />
-            </div>
-          </van-card>
-          <div class="foot" >
-            <van-checkbox  class="lt" style="margin-top:3vw" checked-color="red" v-model="checkAll">全选</van-checkbox>
-            <span>
-              总计金额是
-              <i>${{total}}</i>
-            </span>
-            <van-button class="btn" type="danger">去结算</van-button>
+          <div slot="tags">
+            <van-tag class="lt" plain type="danger">满300减30</van-tag>
+            <van-tag class="lt" plain type="danger">白条3期免息</van-tag>
           </div>
-          <div class="foot foot1" v-show="appear">
-               <van-checkbox  class="lt" style="margin-top:3vw" checked-color="red" v-model="checkAll">全选</van-checkbox>
-               <van-button class="btn" @click="del(i.ispitch)" type="danger">删除</van-button>
+          <div slot="footer">
+            <van-stepper v-model="i.num" input-width="40px" button-size="32px" />
           </div>
-        </van-checkbox>
-        <!-- <van-checkbox name="b">复选框 b</van-checkbox>
-        <van-checkbox name="c">复选框 c</van-checkbox>-->
+        </van-card>
+      </van-checkbox>
+
+      <van-checkbox class="lt" v-model="checkAll">鸿星尔克官方服饰旗舰店</van-checkbox>
+      <!-- <van-checkbox-group v-model="checked"> -->
+      <van-checkbox
+        v-for="i in ary"
+        :key="i.value"
+        class="lt"
+        style="width:100%"
+        :name="i.value"
+        v-model="i.ispitch"
+      >
+        <van-card
+          :num="i.num"
+          :price="i.money"
+          desc="正黑9054，L"
+          title="鸿星尔克男短袖2019夏季新品男子圆领t恤针织衫时尚潮流运动T恤男 正黑9054 L"
+          thumb="//img10.360buyimg.com/mobilecms/s337x337_jfs/t1/87434/31/5765/212386/5def62a2Ef9ec7875/4fc44b76180023c8.jpg!q70.dpg.webp"
+        >
+          <div slot="tags">
+            <van-tag class="lt" plain type="danger">满300减30</van-tag>
+            <van-tag class="lt" plain type="danger">白条3期免息</van-tag>
+          </div>
+          <div slot="footer">
+            <van-stepper v-model="i.num" input-width="40px" button-size="32px" />
+          </div>
+        </van-card>
+        <div class="foot">
+          <van-checkbox class="lt" style="margin-top:3vw" checked-color="red" v-model="checkAll">全选</van-checkbox>
+          <span>
+            总计金额是
+            <i>${{total}}</i>
+          </span>
+          <van-button class="btn" type="danger">去结算</van-button>
+        </div>
+        <div class="foot foot1" v-show="appear">
+          <van-checkbox class="lt" style="margin-top:3vw" checked-color="red" v-model="checkAll">全选</van-checkbox>
+          <van-button class="btn" @click="del(i.ispitch)" type="danger">删除</van-button>
+        </div>
+      </van-checkbox>
+      <!-- <van-checkbox name="b">复选框 b</van-checkbox>
+      <van-checkbox name="c">复选框 c</van-checkbox>-->
       <!-- </van-checkbox-group> -->
+    </div>
+    <div class="foot">
+      <van-checkbox class="lt" style="margin-top:3vw" checked-color="red" v-model="checkAll">全选</van-checkbox>
+      <span>
+        总计金额是
+        <i>${{total}}</i>
+      </span>
+      <van-button class="btn" type="danger">去结算</van-button>
+    </div>
+    <div class="foot foot1" v-show="appear">
+      <van-checkbox class="lt" style="margin-top:3vw" checked-color="red" v-model="checkAll">全选</van-checkbox>
+      <van-button class="btn" @click="del(i.ispitch)" type="danger">删除</van-button>
     </div>
   </div>
 </template>
@@ -103,53 +141,53 @@ export default {
   name: "XXX",
   data() {
     return {
-        appear:false,
-    //   value: "",
+      appear: false,
+      //   value: "",
       flag: false,
       checked: [],
       hide1: false,
-    //   modelu: false,
-    //   result: [],
-    //   chek: false,
+      //   modelu: false,
+      //   result: [],
+      //   chek: false,
       ary: [
         {
-          id:1,
+          id: 1,
           value: "ping",
           money: 32,
           ispitch: true
         },
         {
-             id:2,
+          id: 2,
           value: "ping1",
           money: 32,
           ispitch: false
         },
         {
-             id:3,
+          id: 3,
           value: "ping2",
           money: 32,
           ispitch: false
         },
         {
-             id:4,
+          id: 4,
           value: "ping3",
           money: 32,
           ispitch: false
         },
         {
-             id:5,
+          id: 5,
           value: "ping4",
           money: 32,
           ispitch: false
         },
         {
-             id:6,
+          id: 6,
           value: "ping5",
           money: 32,
           ispitch: false
         },
         {
-             id:7,
+          id: 7,
           value: "ping6",
           money: 32,
           ispitch: false
@@ -158,30 +196,32 @@ export default {
     };
   },
   computed: {
-    checkAll:{
-        get(){
-           return this.ary.every(item=>item.ispitch); 
-        },
-        set(val){
-           this.ary.forEach(item=>item.ispitch=val) 
-           console.log(this.ary)
-        }
+    checkAll: {
+      get() {
+        return this.ary.every(item => item.ispitch);
+      },
+      set(val) {
+        this.ary.forEach(item => (item.ispitch = val));
+        console.log(this.ary);
+      }
     },
-     total(){
-        return this.ary.filter(item=>item.ispitch).reduce((p,n)=>p+n.num*n.money,0)
-     }
+    total() {
+      return this.ary
+        .filter(item => item.ispitch)
+        .reduce((p, n) => p + n.num * n.money, 0);
+    }
   },
   methods: {
     back() {},
-    c1(){
-      this.appear=!this.appear
+    c1() {
+      this.appear = !this.appear;
     },
     hide() {
       this.flag = !this.flag;
     },
-   del(n){
-       this.ary=this.ary.filter(item=>item.ispitch==false)
-   }
+    del() {
+      this.ary = this.ary.filter(item => item.ispitch == false);
+    }
   },
   components: {}
 };
@@ -200,7 +240,6 @@ export default {
     height: 100%;
     width: 26vw;
     float: right;
-    
   }
   > span {
     padding-left: 10vw;

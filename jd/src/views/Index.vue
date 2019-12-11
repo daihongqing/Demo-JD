@@ -99,12 +99,8 @@ nav {
   div {
     flex: 1;
     text-align: center;
-<<<<<<< HEAD
-    padding: 4px;
-=======
     // border-top: 1px #ccc solid;
     // padding: 9px;
->>>>>>> c5c08d897bc6e8f9be71e11029246428b27cdffa
     > a {
       color: gray;
       width: 100%;

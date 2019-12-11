@@ -1,4 +1,5 @@
-import {getSlide,getList}from '../api/home'
+import {getSlide}from '../api/home'
+import {getList} from '../api/classify'
 export function changeSdList({ 
 	commit 
 }) {
