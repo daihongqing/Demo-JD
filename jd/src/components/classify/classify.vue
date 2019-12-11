@@ -3,18 +3,19 @@
     <header-div></header-div>
     <div class="text">
       <div class="left">
-        <van-sidebar id="leftNav" v-model="activeKey">
+        <van-sidebar id="leftNav" v-model="activeKey" >
           <van-sidebar-item
             v-for=" item in nav"
-            :title="item"
-            :key="item"
+            :title="item.til"
+            :key="item.til"
             @click="change"
             id="navItem"
+            
           ></van-sidebar-item>
         </van-sidebar>
       </div>
 
-      <my-test></my-test>
+      <my-test :data='desc'></my-test>
     </div>
   </div>
 </template>
@@ -30,33 +31,9 @@ export default {
       activeKey: 0,
       value: "",
       flag: false,
-      nav: [
-        "热门推荐",
-        "手机数码",
-        "家用电器",
-        "电脑办公",
-        "计生情趣",
-        "美妆护肤",
-        "个护清洁",
-        "汽车生活",
-        "京东超市",
-        "男装",
-        "男鞋",
-        "女装",
-        "女鞋",
-        "母音童装",
-        "图像音屏",
-        "运动户外",
-        "内衣配饰",
-        "食品生鲜",
-        "酒水饮料",
-        "家具家装",
-        "家具厨具",
-        "箱包手袋",
-        "钟表珠宝",
-        "玩具乐器"
-      ],
-      index: 0
+      nav: [],
+      index: 0,
+      desc:[]
     };
   },
   computed: {
@@ -65,7 +42,10 @@ export default {
   created() {
     // this.$store.dispatch('getClassifyList')
     getList().then(data=>{
-      console.log(data)
+      if(data.code==0){
+          this.nav=data.data[0].title
+      }
+     
     })
   },
   methods: {
@@ -86,9 +66,15 @@ export default {
         let ulHeight=ul.offsetHeight
         
         ul.style.transform = `translateY(${-height * index +allHeight/2>=0?0:-height * index +allHeight/2<=-ulHeight+allHeight?-ulHeight+allHeight:-height * index +allHeight/2}px)`;
-        console.log(-height * index +allHeight/2,-ulHeight)
+        // console.log(-height * index +allHeight/2,-ulHeight)
         // return change(index)
       });
+      getList().then(data=>{
+        if (data.code==0) {
+        console.log(data.data[1].hot[index])  
+        this.desc.push(data.data[1].hot[index])
+        }
+      })
     }
   },
   components: {

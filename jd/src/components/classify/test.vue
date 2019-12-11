@@ -1,15 +1,12 @@
 <template>
   <div class="box">
-    <div v-for="i in 4" :key="i" class="allBox">
-      <h4 class="title">热门品牌</h4>
+    <div v-for="i in data[0]" :key="i.id" class="allBox">
+      <h4 class="title">{{i.title}}</h4>
       <ul>
         <router-link to>
-          <li v-for="i in 10" :key="i" class="imgBox">
-            <img
-              src="https://img30.360buyimg.com/focus/s140x140_jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png"
-              alt
-            />
-            <i class="test">小米</i>
+          <li v-for="item in i.children" :key="item.describe" class="imgBox">
+            <img :src="item.pic_url" alt />
+            <i class="test">{{item.describe}}</i>
           </li>
         </router-link>
       </ul>
@@ -20,8 +17,12 @@
 // @ is an alias to /src
 export default {
   name: "test",
+  props: ["data"],
   data() {
     return {};
+  },
+  created() {
+    console.log(this.data);
   },
   components: {}
 };

@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Index from '../views/Index.vue'
 import classify from './classify'
-import shopping from './shopping'
+import shopping from '../components/shopping/shopping.vue'
+import order from '../components/shopping/order.vue'
 import surprise from './surprise'
 import user from './user'
 import home from './home'
@@ -17,7 +18,17 @@ const routes = [
     name: 'Index',
     redirect: '/index/home',
     component: Index,
-    children: home.concat(classify, shopping, surprise, user,acco)
+    children: home.concat(classify,  surprise, user, acco)
+  },
+  {
+    path: '/shopping',
+    name: 'shopping',
+    component: shopping,
+  },
+  {
+    path: '/order',
+    name: 'order',
+    component: order,
   },
   {
     path: '/login',

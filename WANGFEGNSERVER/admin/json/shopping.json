@@ -1,0 +1,17 @@
+[{
+    "userid": 2,
+    "children": [{
+        "price": "123",
+        "desc": "小米（MI）旅行箱拉杆箱 男女万向轮托运旅行皮箱90分行李箱24英寸 星空灰 24英寸",
+        "pic": "https://img10.360buyimg.com/mobilecms/s234x234_jfs/t1/95526/39/5675/81282/5deef8f9E1ae59143/ee13679a1478addd.jpg!q70.dpg.webp",
+        "color": "星空灰"
+    }]
+}, {
+    "userid": 1,
+    "children": [{
+        "price": "999",
+        "desc": "小米（MI）旅行箱拉杆箱 男女万向轮托运旅行皮箱90分行李箱24英寸 星空灰 24英寸",
+        "pic": "https://img10.360buyimg.com/mobilecms/s234x234_jfs/t1/95526/39/5675/81282/5deef8f9E1ae59143/ee13679a1478addd.jpg!q70.dpg.webp",
+        "color": "星空灰"
+    }]
+}]

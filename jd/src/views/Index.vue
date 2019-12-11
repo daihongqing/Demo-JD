@@ -26,7 +26,7 @@
         </router-link>
       </div>
       <div>
-        <router-link to="/index/shopping">
+        <router-link to="/shopping">
           <van-icon name="shopping-cart-o"></van-icon>
           <div>购物车</div>
         </router-link>
