@@ -9,7 +9,7 @@
       <div class="dot rt">
         <img src="../../assets/dot.png" alt />
       </div>
-    </div>
+    </div> 
     <div class="accountArea">
       <section class="account_section_v2">
         <div class="account_section_title">

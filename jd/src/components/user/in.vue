@@ -14,7 +14,7 @@
             <span class="my_header_name_edit"></span>
             <span class="plus_icon"></span>
           </div>
-          <div class="pin">
+          <div class="pin"> 
             <div class="lt">用户名：jd_4572477b343e7</div>
           </div>
           <div class="hor-tips">
