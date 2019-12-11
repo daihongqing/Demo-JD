@@ -371,43 +371,6 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-
-    <!--灰色背景部分  -->
-    <div class="mainBox">
-      <!-- 京东快报 -->
-      <div class="quire">
-        <div class="lt">京东快报</div>
-
-        <van-swipe style="height: 5vw;" :autoplay="2000" :show-indicators="false" vertical>
-          <van-swipe-item>
-            <div>
-              <i style="color:red">最新</i>
-              <span>联想小新Pro，舒适的视觉体验真不错</span>
-            </div>
-          </van-swipe-item>
-          <van-swipe-item>
-            <i style="color:red">最热</i>
-            <span>联想小新Pro，舒适的视觉体验</span>
-          </van-swipe-item>
-          <van-swipe-item>
-            <i style="color:red">推荐</i>
-            <span>联想小新Pro，舒适的视觉体验坚持是都会发生两顿饭了</span>
-          </van-swipe-item>
-        </van-swipe>
-
-        <div class="rt">更多</div>
-      </div>
-      <!-- 为你推荐 -->
-      <div class="title">
-        <img
-          src="https://img11.360buyimg.com/jdphoto/jfs/t1/31601/22/15554/14040/5cc2a86fEbdb1098b/88174b36f85283b6.png"
-          alt
-        />
-      </div>
-      <!-- 懒加载部分 共用组件 -->
-
-=======
     <!-- 京东快报 -->
     <div class="quire">
       <div class="lt">京东快报</div>
@@ -428,7 +391,6 @@
         </van-swipe-item>
       </van-swipe>
       <div class="rt">更多</div>
->>>>>>> 15f27dfb4208090734a114543e88bbae470d106f
     </div>
   </div>
 </template>
