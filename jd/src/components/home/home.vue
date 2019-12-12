@@ -246,9 +246,9 @@
       </div>
     </div>
 
-   <lazy-component>
+    <lazy-component>
       <rec></rec>
-   </lazy-component>
+    </lazy-component>
   </div>
 </template>
 
@@ -261,16 +261,13 @@ export default {
   data() {
     return {
       value: "",
-      time: 30 * 60 * 60 * 1000,
-     
+      time: 30 * 60 * 60 * 1000
     };
   },
   created() {
     this.$store.dispatch("changeSdList");
   },
-  methods: {
-    
-  },
+  methods: {},
   computed: {
     ...mapState(["homeSlideList"])
   },
@@ -460,7 +457,7 @@ export default {
     .quire {
       overflow: hidden;
       display: flex;
-      margin: 0 5vw 2vw 5vw;
+      margin: 0 2vw 2vw 2vw;
       border-radius: 5px;
       background: #fff;
       div {
@@ -482,15 +479,14 @@ export default {
     }
     .title {
       display: flex;
-      margin: 0 5vw;
+      margin: 0 2vw;
+      border-bottom: 1px #f0f2f5 solid;
       img {
         flex: 1;
         width: 100%;
       }
     }
-    .lazyBox {
-      border-top: 1px #f0f2f5 solid;
-    }
+   
   }
 }
 </style>
