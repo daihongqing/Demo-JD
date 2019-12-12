@@ -12,7 +12,7 @@
     <!-- 轮播图 -->
     <div class="slide">
       <van-swipe :autoplay="3000" indicator-color="white">
-        <van-swipe-item v-for="item in homeSlideList[0]['swiper']" :key="item.id">
+        <van-swipe-item v-for="item in homeSlideList[0]['swiper1']" :key="item.id">
           <img :src="item.pic" />
         </van-swipe-item>
       </van-swipe>
@@ -245,16 +245,13 @@
         />
       </div>
     </div>
-
-    <lazy-component>
-      <rec></rec>
-    </lazy-component>
+    <rec></rec>
+   
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
-// import homeSlideList from "@/api/home.js";
 import Rec from "../rec";
 export default {
   name: "home",
@@ -486,7 +483,6 @@ export default {
         width: 100%;
       }
     }
-   
   }
 }
 </style>
