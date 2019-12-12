@@ -8,14 +8,15 @@ route.get('/slide', (req, res) => {
     data = data.map(item => {
         console.log(item.runM);
         return {
-            swiper:item.swiper,
+            swiper1:item.swiper1,
             card1:item.card1,
             card2:item.card2,
             runM:item.runM,
             skill:item.skill,
             fourth:item.fourth,
             guang:item.guang,
-            tao:item.tao
+            tao:item.tao,
+            recommend1:item.recommend1
         }  
     })
     if (data.length > 0) {
