@@ -225,7 +225,11 @@ export default {
 </script>
 <style lang="less">
 .qqq {
+  background: #eee;
+    margin: 0 2vw;
   .van-grid-item {
+    padding: 0 3px 2px 0;
+    padding: none;
     .van-grid-item__content {
       padding: 15px 15px 0;
       &::after {

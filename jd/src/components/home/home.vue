@@ -118,10 +118,10 @@
       <!-- 四个框 -->
       <ul class="gird">
         <li class="bg">
-           <img
+          <img
             src="https://m.360buyimg.com/mobilecms/s184x242_jfs/t1/64334/23/16552/15836/5de0b7fcE54784a89/2774d71def05b8ed.png!q70.jpg.dpg"
-            alt  /> 
-            
+            alt
+          />
         </li>
         <li>
           <img
@@ -160,81 +160,21 @@
             </span>
             <div class="both">
               <img :src="item.pic1" />
-              <img  :src="item.pic2" />
-            </div>
-          </div>
-          <div class="computer">
-            <span>
-              <h4 class="skil">电竞荣耀</h4>
-              <span>电竞人才百万缺口</span>
-            </span>
-            <div class="both">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t11827/19/459031207/215409/fca6ff73/59f0569dN0cca8a4c.jpg!q70.jpg.dpg"
-              />
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t30742/186/1618456709/618922/87790a2a/5ce66b7dN03f83be6.jpg!q70.jpg.dpg"
-                alt
-              />
+              <img :src="item.pic2" />
             </div>
           </div>
         </div>
         <!-- 下面 -->
         <div class="fourthBox">
-          <div class="one">
+          <div class="one" v-for="item in homeSlideList[5]['fourth']" :key="item.id">
             <div class="font">
               <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
+                <h4>{{item.fullName}}</h4>
+                <span>{{item.firstName}}</span>
               </span>
             </div>
             <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
-            </div>
-          </div>
-          <div class="one">
-            <div class="font">
-              <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
-              </span>
-            </div>
-            <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
-            </div>
-          </div>
-          <div class="one">
-            <div class="font">
-              <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
-              </span>
-            </div>
-            <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
-            </div>
-          </div>
-          <div class="one">
-            <div class="font">
-              <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
-              </span>
-            </div>
-            <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
+              <img :src="item.pic" />
             </div>
           </div>
         </div>
@@ -249,150 +189,73 @@
       </div>
       <div class="bottom">
         <div class="fourthBox">
-          <div class="one">
+          <div class="one" v-for="item in homeSlideList[6]['guang']" :key="item.id">
             <div class="font">
               <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
+                <h4>{{item.fullName}}</h4>
+                <span>{{item.firstName}}</span>
               </span>
             </div>
             <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
-            </div>
-          </div>
-          <div class="one">
-            <div class="font">
-              <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
-              </span>
-            </div>
-            <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
-            </div>
-          </div>
-          <div class="one">
-            <div class="font">
-              <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
-              </span>
-            </div>
-            <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
-            </div>
-          </div>
-          <div class="one">
-            <div class="font">
-              <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
-              </span>
-            </div>
-            <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
+              <img :src="item.pic" />
             </div>
           </div>
         </div>
         <div class="fourthBox">
-          <div class="one">
+          <div class="one" v-for="item in homeSlideList[7]['tao']" :key="item.id">
             <div class="font">
               <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
+                <h4>{{item.fullName}}</h4>
+                <span>{{item.firstName}}</span>
               </span>
             </div>
             <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
-            </div>
-          </div>
-          <div class="one">
-            <div class="font">
-              <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
-              </span>
-            </div>
-            <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
-            </div>
-          </div>
-          <div class="one">
-            <div class="font">
-              <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
-              </span>
-            </div>
-            <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
-            </div>
-          </div>
-          <div class="one">
-            <div class="font">
-              <span>
-                <h4>海尔家电</h4>
-                <span>家电盛宴</span>
-              </span>
-            </div>
-            <div class="imgbox">
-              <img
-                src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/78823/1/12449/86295/5d9c46c0Ee8ad1943/ee6b07c91bf4b20c.jpg!q70.jpg.dpg"
-                alt
-              />
+              <img :src="item.pic" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- 京东快报 -->
-    <div class="quire">
-      <div class="lt">京东快报</div>
-      <van-swipe style="height: 5vw;" :autoplay="2000" :show-indicators="false" vertical>
-        <van-swipe-item>
-          <div>
-            <i style="color:red">最新</i>
-            <span>联想小新Pro，舒适的视觉体验真不错</span>
-          </div>
-        </van-swipe-item>
-        <van-swipe-item>
-          <i style="color:red">最热</i>
-          <span>联想小新Pro，舒适的视觉体验</span>
-        </van-swipe-item>
-        <van-swipe-item>
-          <i style="color:red">推荐</i>
-          <span>联想小新Pro，舒适的视觉体验坚持是都会发生两顿饭了</span>
-        </van-swipe-item>
-      </van-swipe>
-      <div class="rt">更多</div>
+    <div class="mainBox">
+      <div class="quire">
+        <div class="lt">京东快报</div>
+        <van-swipe style="height: 5vw;" :autoplay="2000" :show-indicators="false" vertical>
+          <van-swipe-item>
+            <div>
+              <i style="color:red">最新</i>
+              <span>联想小新Pro，舒适的视觉体验真不错</span>
+            </div>
+          </van-swipe-item>
+          <van-swipe-item>
+            <i style="color:red">最热</i>
+            <span>联想小新Pro，舒适的视觉体验</span>
+          </van-swipe-item>
+          <van-swipe-item>
+            <i style="color:red">推荐</i>
+            <span>联想小新Pro，舒适的视觉体验坚持是都会发生两顿饭了</span>
+          </van-swipe-item>
+        </van-swipe>
+        <div class="rt">更多</div>
+      </div>
+      <div class="title">
+        <img
+          src="https://img11.360buyimg.com/jdphoto/jfs/t1/31601/22/15554/14040/5cc2a86fEbdb1098b/88174b36f85283b6.png"
+          alt
+        />
+      </div>
     </div>
+
+    <lazy-component>
+      <rec></rec>
+    </lazy-component>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
 // import homeSlideList from "@/api/home.js";
+import Rec from "../rec";
 export default {
   name: "home",
   data() {
@@ -404,9 +267,12 @@ export default {
   created() {
     this.$store.dispatch("changeSdList");
   },
-
+  methods: {},
   computed: {
     ...mapState(["homeSlideList"])
+  },
+  components: {
+    rec: Rec
   }
 };
 </script>
@@ -563,9 +429,16 @@ export default {
       width: 100%;
       display: flex;
       .one {
+        width: 25%;
         flex: 1;
         margin: 1vw 1vw 0 0;
         background: #fff;
+        span:nth-child(2) {
+          font-size: 13px;
+        }
+        .imgbox {
+          margin: 2vw;
+        }
         img {
           width: 100%;
         }
@@ -584,7 +457,7 @@ export default {
     .quire {
       overflow: hidden;
       display: flex;
-      margin: 0 5vw 2vw 5vw;
+      margin: 0 2vw 2vw 2vw;
       border-radius: 5px;
       background: #fff;
       div {
@@ -606,16 +479,14 @@ export default {
     }
     .title {
       display: flex;
-      margin: 0 5vw;
+      margin: 0 2vw;
+      border-bottom: 1px #f0f2f5 solid;
       img {
         flex: 1;
         width: 100%;
       }
     }
-    .lazyBox {
-      border-top: 1px #f0f2f5 solid;
-      
-    }
+   
   }
 }
 </style>

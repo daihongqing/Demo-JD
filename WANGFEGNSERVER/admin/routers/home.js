@@ -11,7 +11,11 @@ route.get('/slide', (req, res) => {
             swiper:item.swiper,
             card1:item.card1,
             card2:item.card2,
-            runM:item.runM
+            runM:item.runM,
+            skill:item.skill,
+            fourth:item.fourth,
+            guang:item.guang,
+            tao:item.tao
         }  
     })
     if (data.length > 0) {
