@@ -61,7 +61,12 @@ RESULT：{
 	codeText:'OK'
     data:[{wiper:[{id:xx,pic:xx}]},
 		{card1:[{id:xxx,pic:xxx,title:xxx}]},
-		{card2[{id:xxx,pic:xxx,title:xxx}]}
+		{card2[{id:xxx,pic:xxx,title:xxx}]},
+        {"runM": [{"id": xxx,"original": xxx,"present": xxx,"pic": xxx]}},
+        {"skill": [{"id":xxx,"fullName": xxx,"firstName": xxx,"pic1": xxx,"pic2": xxx]}},
+        {"fourth": [{"id": 1,"fullName": xxx,"firstName": xxx,"pic": xxx}]},
+        {"guang": [{"id": 1,"fullName": xxx,"firstName": xxx,"pic": xxx}]},
+        {"recommend": [{"id": 1,"price": xxx,"desc": xxx,"pic": xxx}]},
        ]
 ----
 CLASSIFYATA
@@ -103,3 +108,21 @@ RESULT：{
 
         }]
     },
+
+----
+LOGINAFTERDATA
+URL：/home/slide
+METHOD：GET
+PARAMS：null
+RESULT：{
+	code:0  
+	codeText:'OK'
+    data:[{wiper:[{id:xx,pic:xx}]},
+		{card1:[{id:xxx,pic:xxx,title:xxx}]},
+		{card2:[{id:xxx,pic:xxx,title:xxx}]},
+        {"runM": [{"id": xxx,"original": xxx,"present": xxx,"pic": xxx]}},
+        {"skill": [{"id":xxx,"fullName": xxx,"firstName": xxx,"pic1": xxx,"pic2": xxx]}},
+        {"fourth": [{"id": 1,"fullName": xxx,"firstName": xxx,"pic": xxx}]},
+        {"guang": [{"id": 1,"fullName": xxx,"firstName": xxx,"pic": xxx}]},
+        {"recommend": [{"id": 1,"price": xxx,"desc": xxx,"pic": xxx}]},
+       ]    
