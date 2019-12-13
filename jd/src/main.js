@@ -5,8 +5,8 @@ import store from './store'
 import "./less/common.less"
 
 import Vant from 'vant';
-import 'vant/lib/index.css';
 
+import 'vant/lib/index.css';
 import '@/less/common.less'
 
 import ElementUI from 'element-ui';

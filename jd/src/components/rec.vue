@@ -1,232 +1,55 @@
 <template>
-  <div class="Box">
-    <van-grid class="qqq" :gutter="1" :column-num="2">
-      <van-grid-item>
-        <van-image
-          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
-        />
-        <div class="info">
-          <div class="rec_name">
-            <i class="mod_tag">
-              <img
-                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
-              />
-            </i>
-            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
-          </div>
-          <div class="price_info">
-            <div class="price">
-              ￥
-              <em>1000</em>
+    <div class="Box">
+  
+      <van-grid class="qqq" :gutter="1" :column-num="2">
+        <van-grid-item v-for="item in homeSlideList[8]['recommend1']" :key="item.id" >
+          <van-image :src="item.pic" />
+          <div class="info">
+            <div class="rec_name">
+              <i class="mod_tag">
+                <img
+                  src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
+                />
+              </i>
+              {{item.desc}}
+            </div>
+            <div class="price_info">
+              <div class="price">
+                ￥
+                <em>{{item.price}}</em>
+              </div>
             </div>
           </div>
-        </div>
-      </van-grid-item>
-      <van-grid-item>
-        <van-image
-          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
-        />
-        <div class="info">
-          <div class="rec_name">
-            <i class="mod_tag">
-              <img
-                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
-              />
-            </i>
-            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
-          </div>
-          <div class="price_info">
-            <div class="price">
-              ￥
-              <em>1000</em>
-            </div>
-          </div>
-        </div>
-      </van-grid-item>
-      <van-grid-item>
-        <van-image
-          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
-        />
-        <div class="info">
-          <div class="rec_name">
-            <i class="mod_tag">
-              <img
-                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
-              />
-            </i>
-            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
-          </div>
-          <div class="price_info">
-            <div class="price">
-              ￥
-              <em>1000</em>
-            </div>
-          </div>
-        </div>
-      </van-grid-item>
-      <van-grid-item>
-        <van-image
-          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
-        />
-        <div class="info">
-          <div class="rec_name">
-            <i class="mod_tag">
-              <img
-                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
-              />
-            </i>
-            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
-          </div>
-          <div class="price_info">
-            <div class="price">
-              ￥
-              <em>1000</em>
-            </div>
-          </div>
-        </div>
-      </van-grid-item>
-      <van-grid-item>
-        <van-image
-          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
-        />
-        <div class="info">
-          <div class="rec_name">
-            <i class="mod_tag">
-              <img
-                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
-              />
-            </i>
-            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
-          </div>
-          <div class="price_info">
-            <div class="price">
-              ￥
-              <em>1000</em>
-            </div>
-          </div>
-        </div>
-      </van-grid-item>
-      <van-grid-item>
-        <van-image
-          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
-        />
-        <div class="info">
-          <div class="rec_name">
-            <i class="mod_tag">
-              <img
-                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
-              />
-            </i>
-            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
-          </div>
-          <div class="price_info">
-            <div class="price">
-              ￥
-              <em>1000</em>
-            </div>
-          </div>
-        </div>
-      </van-grid-item>
-      <van-grid-item>
-        <van-image
-          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
-        />
-        <div class="info">
-          <div class="rec_name">
-            <i class="mod_tag">
-              <img
-                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
-              />
-            </i>
-            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
-          </div>
-          <div class="price_info">
-            <div class="price">
-              ￥
-              <em>1000</em>
-            </div>
-          </div>
-        </div>
-      </van-grid-item>
-      <van-grid-item>
-        <van-image
-          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
-        />
-        <div class="info">
-          <div class="rec_name">
-            <i class="mod_tag">
-              <img
-                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
-              />
-            </i>
-            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
-          </div>
-          <div class="price_info">
-            <div class="price">
-              ￥
-              <em>1000</em>
-            </div>
-          </div>
-        </div>
-      </van-grid-item>
-      <van-grid-item>
-        <van-image
-          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
-        />
-        <div class="info">
-          <div class="rec_name">
-            <i class="mod_tag">
-              <img
-                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
-              />
-            </i>
-            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
-          </div>
-          <div class="price_info">
-            <div class="price">
-              ￥
-              <em>1000</em>
-            </div>
-          </div>
-        </div>
-      </van-grid-item>
-      <van-grid-item>
-        <van-image
-          src="https://img14.360buyimg.com/n7/jfs/t1/105414/35/5191/206584/5deb87e0E69b11452/eb6745b0f817e1de.jpg!q70.dpg.webp"
-        />
-        <div class="info">
-          <div class="rec_name">
-            <i class="mod_tag">
-              <img
-                src="https://img20.360buyimg.com/jdphoto/jfs/t1/97691/14/3984/3386/5de478dcE037aad73/9f582c42b5be2826.png"
-              />
-            </i>
-            斯丹澳 折叠沙发床 两用小户型客厅单双人1.5米实木多功能储物布艺简约北欧沙发床两用 100cm*192cm(普通海绵坐垫) 1.8米*2.0米
-          </div>
-          <div class="price_info">
-            <div class="price">
-              ￥
-              <em>1000</em>
-            </div>
-          </div>
-        </div>
-      </van-grid-item>
-    </van-grid>
-  </div>
+        </van-grid-item>
+      
+      </van-grid>
+   
+    </div>
 </template>
 <script>
 // @ is an alias to /src
+import { mapState } from "vuex";
 export default {
   data() {
-    return {};
+    return {
+    
+    };
   },
-  components: {}
+  created() {
+    this.$store.dispatch("changeSdList");
+  },
+  methods: {
+   
+  },
+  computed: {
+    ...mapState(["homeSlideList"])
+  }
 };
 </script>
 <style lang="less">
 .qqq {
   background: #eee;
-    margin: 0 2vw;
+  margin: 0 2vw;
   .van-grid-item {
     padding: 0 3px 2px 0;
     padding: none;
