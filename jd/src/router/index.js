@@ -24,6 +24,8 @@ const routes = [
     path: '/shopping',
     name: 'shopping',
     component: shopping,
+    children:[
+    ]
   },
   {
     path: '/order',
