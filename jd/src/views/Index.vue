@@ -32,7 +32,7 @@
         </router-link>
       </div>
       <div>
-        <router-link to="/index/user">
+        <router-link to="/login">
           <van-icon name="user-o"></van-icon>
           <div>未登录</div>
         </router-link>
