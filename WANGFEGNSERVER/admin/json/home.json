@@ -1,38 +1,6 @@
-<<<<<<< HEAD
-[{
-        "swiper": [{
-            "id": 1,
-            "pic": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/87547/20/4829/99138/5de9be86Ee2a94572/180a9874d66e6a84.jpg!cr_1125x445_0_171!q70.jpg.dpg"
-        }, {
-            "id": 2,
-            "pic": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/94616/8/5007/135372/5dea2686E54ac8fd0/2bdb4752ff841547.jpg!cr_1125x445_0_171!q70.jpg.dpg"
-        }, {
-            "id": 3,
-            "pic": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/105518/23/5180/69268/5deb2ebcE97a91839/a45dd25a75578d1e.jpg!cr_1125x445_0_171!q70.jpg.dpg"
-        }, {
-            "id": 4,
-            "pic": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/99002/28/4522/140782/5de7983bEb6ae9286/694e7242ac4c84b5.jpg!cr_1125x445_0_171!q70.jpg.dpg"
-        }, {
-            "id": 5,
-            "pic": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/94181/15/5519/129233/5dedc27dE50d9bec1/2cd470b455083b31.jpg!cr_1125x445_0_171!q70.jpg.dpg"
-        }, {
-            "id": 6,
-            "pic": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/24046/10/6380/94217/5c511b9dEcc9ba39c/7913173ae5ed0617.jpg!cr_1125x445_0_171!q70.jpg.dpg"
-        }, {
-            "id": 7,
-            "pic": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/102618/37/4367/86674/5de5ca99E58419c73/5ed7d099c46df679.jpg!cr_1125x445_0_171!q70.jpg.dpg"
-        }, {
-            "id": 8,
-            "pic": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/94398/38/4882/127787/5de9b746Eafae778f/57d77f679a79650e.jpg!cr_1125x445_0_171!q70.jpg.dpg"
-        }]
-    },
-    {
-        "swiper": [
-=======
 [
     {
         "swiper1": [
->>>>>>> b298503e623ddce84effba8eb706e0e69c3e49a4
             {
                 "id": 1,
                 "pic": "https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/87547/20/4829/99138/5de9be86Ee2a94572/180a9874d66e6a84.jpg!cr_1125x445_0_171!q70.jpg.dpg"
