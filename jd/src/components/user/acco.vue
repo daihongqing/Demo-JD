@@ -2,7 +2,7 @@
   <div class="Box">
     <!-- 头部 -->
     <div class="header">
-      <van-icon class="lt a" name="arrow-left" size="20px" @click="ck"/>
+      <van-icon class="lt a" name="arrow-left" size="20px" @click="ck" />
       <div class="miJD">我的京东</div>
       <van-icon class="rt dot" name="ellipsis" size="20px" @click="cli" />
     </div>
@@ -18,7 +18,7 @@
             <div class="top_right_decoration_points"></div>
             <div class="top_right_decoration_ring"></div>
             <div class="top_right_decoration_circle"></div>
-            <div class="current_account_tip">当前登录</div>
+            <div class="current_account_tip">{{loginState?'当前登录':'当前未登录'}}</div>
             <!--END当前登录的图标-->
             <div class="user_info">
               <img
@@ -121,11 +121,12 @@
           alt
         />京东客户端
       </a>
-      <a class="login_out">
+      <a class="login_out" @click="login">
         <img
           src="//img10.360buyimg.com/jdphoto/jfs/t9052/339/2338090052/1443/912da0a4/59cc5951N10f8f9b3.png"
           alt
-        />退出登录
+        />
+        {{loginState?'退出登录':'请登录'}}
       </a>
     </div>
     <navigation v-show="a"></navigation>
@@ -134,6 +135,7 @@
 <script>
 // @ is an alias to /src
 import Navigation from "../navigation";
+import { mapState } from "vuex";
 export default {
   name: "acco",
   data() {
@@ -150,7 +152,15 @@ export default {
     },
     cli() {
       this.a = !this.a;
+    },
+    login() {
+      localStorage.setItem('token','www')
+      this.$store.commit("changeState", { loginState: false });
+      this.$router.push("/login");
     }
+  },
+  computed: {
+    ...mapState(["loginState"])
   }
 };
 </script>

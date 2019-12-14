@@ -6,7 +6,6 @@ const {
 route.get('/slide', (req, res) => {
     let data = req.$picDATA;
     data = data.map(item => {
-        console.log(item.runM);
         return {
             swiper1:item.swiper1,
             card1:item.card1,

@@ -14,7 +14,7 @@
         <router-link to="/index/classify">
           <van-icon name="apps-o"></van-icon>
           <div>分类</div>
-        </router-link>    
+        </router-link>
       </div>
       <div>
         <router-link to="/index/surprise">
@@ -32,9 +32,9 @@
         </router-link>
       </div>
       <div>
-        <router-link to="/login">
+        <router-link to="/index/user">
           <van-icon name="user-o"></van-icon>
-          <div>未登录</div>
+          <div>{{loginState?'我的':'未登录'}}</div>
         </router-link>
       </div>
     </nav>
@@ -44,7 +44,8 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
-
+import { judgeLogin } from "@/api/login";
+import { mapState } from "vuex";
 export default {
   name: "home",
   data() {
@@ -54,30 +55,14 @@ export default {
     };
   },
   created() {
-    console.log(this.pathname)
-  },
-  /* computed: {
-    move:function() {
-      switch (this.pathname) {
-        case '/index/home':
-          console.log(qqq)
-         return this.active = 0;
-          break;
-
-        case '/index/classify':
-         return this.active = 1;
-          break;
-        default:
-          console.log(111)
-          break;
-          
+    judgeLogin().then(data => {
+      if (data.code !== 0) {
+        this.$router.push("/login");
       }
-    }
-  }, */
-  methods: {},
-  components: {},
-  watch: {
-    
+    });
+  },
+  computed: {
+    ...mapState(["loginState"])
   }
 };
 </script>
@@ -94,8 +79,8 @@ nav {
   bottom: 0;
   left: 0;
   background: #fff;
-  box-shadow: 0 0 10px 0 hsla(0,6%,58%,.6);
-  -webkit-box-shadow: 0 0 10px 0 hsla(0,6%,58%,.6);
+  box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
+  -webkit-box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
   div {
     flex: 1;
     text-align: center;
@@ -119,6 +104,5 @@ nav {
       color: red;
     }
   }
-
 }
 </style>

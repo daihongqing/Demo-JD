@@ -1,7 +1,7 @@
 <template>
   <div class="loginBox">
     <header>
-      <div class="lt">X</div>
+      <div class="lt" @touchend="black">X</div>
       <div class="rt">帮助</div>
     </header>
     <div class="icon-1">
@@ -11,13 +11,13 @@
       <div class="inpBox">
         <div class="useBox">
           <el-input placeholder="手机号/邮箱/手机号 " v-model="input1" clearable @input="msgFn"></el-input>
-        </div>  
+        </div>
         <div class="pswBox">
           <el-input placeholder="请输入密码" v-model="input2" show-password clearable @input="msgFn"></el-input>
           <span class="forget">忘记密码</span>
         </div>
       </div>
-      <el-button class="btn" :class="{active:flag}" type="danger" round>登录</el-button>
+      <el-button class="btn" :class="{active:flag}" type="danger" round @click="login">登录</el-button>
       <div class="textBox">
         <div class="lt" @click="changeBtn">短信验证码登录</div>
         <router-link to="/create">
@@ -38,7 +38,7 @@
       </div>
       <el-button class="btn" :class="{active:flag}" type="danger" round>获取验证码</el-button>
       <div class="textBox">
-        <div class="lt" @click="changeBtn">账号密码登录</div> 
+        <div class="lt" @click="changeBtn">账号密码登录</div>
         <router-link to="/create">
           <div class="rt">新用户注册</div>
         </router-link>
@@ -68,6 +68,7 @@
 </template>
 <script>
 // @ is an alias to /src
+import { changeState } from "@/store/actions";
 export default {
   name: "XXX",
   data() {
@@ -96,6 +97,17 @@ export default {
     },
     changeBtn() {
       this.isSelect = !this.isSelect;
+    },
+    black() {
+      this.$router.go(-1);
+    },
+    login() {
+      let obj = {
+        phone: this.input1,
+        password: this.input2
+      };
+      this.$store.dispatch("changeState", obj);
+      
     }
   },
   components: {}

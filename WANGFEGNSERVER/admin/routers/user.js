@@ -19,37 +19,37 @@ route.post('/login', (req, res) => {
         return item.phone === phone && item.password === password;
     });
     if (temp) {
-        req.session.userID = parseFloat(temp.id);
+        req.session.userID = parseFloat(temp.userid);
         res.send(success(true));
         return;
     }
-    console.log(temp);
-
     res.send(success(false, {
         codeText: 'user name password mismatch!'
     }));
 });
 //获取用户详细信息
-route.post('/login', (req, res) => {
+route.get('/login', (req, res) => {
     let userID = req.session.userID;
     let data = req.$userDATA;
-    data = data.filter(item => item.userid == userID)
     if (data.length > 0) {
-        res.send(success(true, {
-            data: data
-        }))
+        data.forEach(item => {
+            if (item.userid == userID) {
+                console.log(item);
+                res.send(success(true, {
+                    data: item
+                }))
+            }
+        });
         return
     }
     res.send(success(false, {
         codeText: 'user name  mismatch!'
     }))
-
-
 });
 //验证用户是否登录
 route.get('/login', (req, res) => {
     let userID = req.session.userID;
-    console.log('userId', req.session);
+    // console.log('userId', req.session);
     if (userID) {
         res.send(success(true));
         return

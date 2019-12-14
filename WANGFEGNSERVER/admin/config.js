@@ -11,6 +11,7 @@ module.exports = {
     //=>SESSION存储相关信息
 	SESSION: {
 		secret: 'WFJY',
+		name:'wf',
 		saveUninitialized: false,
 		resave: false,
 		cookie: {

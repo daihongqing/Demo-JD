@@ -5,17 +5,17 @@
       <div class="my_header1">
         <div class="user_info">
           <div class="info">
-            <img :src="value.pic" alt />
+            <img src="" alt />
           </div>
         </div>
         <div class="personal_wrap">
           <div class="name_wrap" @click="showPopup">
-            <span class="my_header_name">{{value.phone}}</span>
+            <span class="my_header_name">xxx</span>
             <span class="my_header_name_edit"></span>
             <span class="plus_icon"></span>
           </div>
           <div class="pin">
-            <div class="lt">用户名：{{value.name}}</div>
+            <div class="lt">用户名：xxxxx</div>
           </div>
           <div class="hor-tips">
             <div class="notice">京享值415</div>
@@ -233,7 +233,6 @@
 import Rec from "../rec";
 export default {
   name: "user",
-  props:['value'],
   data() {
     return {
       show: false,

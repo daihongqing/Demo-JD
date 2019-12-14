@@ -1,4 +1,6 @@
+let loginSate = localStorage.getItem('token')
 export default {
 	homeSlideList:[],
-	classifyList:[]
+	classifyList:[],
+	loginState: loginSate
 }
