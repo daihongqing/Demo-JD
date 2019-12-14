@@ -107,7 +107,6 @@ export default {
         password: this.input2
       };
       this.$store.dispatch("changeState", obj);
-      
     }
   },
   components: {}
